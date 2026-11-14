@@ -1,0 +1,113 @@
+﻿comment_id,student_id,code_id,comment
+MLR001,SYNMHS001,ML_PY01,Perhitungan rata-rata dan suhu tertinggi dipisahkan dari tampilan laporan. Fungsi-fungsinya jadi punya tugas yang mudah dibedakan.
+MLR002,SYNMHS002,ML_CPP02,"Keterangan catatSetoran menulis satuan gram, sementara nilai yang dipakai program dalam kilogram. Dokumentasinya bisa menyesatkan orang yang memanggil fungsi."
+MLR003,SYNMHS003,ML_JAVA04,"Tambahkan keterangan pada pesan tentang arti true dan false yang dikembalikan, supaya pemanggil tahu apakah pemesanan berhasil atau ditolak."
+MLR004,SYNMHS004,ML_PHP04,Baris echo pemisah di tampilkan kurang masuk ke dalam dibanding echo judul. Penataan baris dalam foreach-nya belum konsisten.
+MLR005,SYNMHS005,ML_CPP01,Tulisan Selesai memproses tiket dicetak oleh baris yang indentasinya tidak sejajar dengan isi loop lainnya. Posisi barisnya jadi membingungkan.
+MLR006,SYNMHS006,ML_PHP02,"Spasi pada perkalian sudah rapi. Di tampilkanDaftar, indentasi baris Status masih beda dari baris Peserta dalam blok yang sama."
+MLR007,SYNMHS007,ML_CPP02,Setoran yang beratnya nol atau negatif langsung ditolak lalu fungsi berhenti. Alur itu sudah mencegah proses setoran dilanjutkan.
+MLR008,SYNMHS008,ML_PY03,"Sebagai demo pengeluaran kos sudah cukup tergambar. Untuk tugas laporan bulanan, pilihan periode yang diminta masih belum tersedia."
+MLR009,SYNMHS009,ML_JAVA02,Penjelasan di atas persentase sudah cukup membantu karena menyebutkan dua nilai yang dipakai untuk menghitung hasilnya.
+MLR010,SYNMHS010,ML_CPP01,Komentar di atas hitungTagihan membantu menjelaskan satuan hasil dan bahwa tarif jam pertama sama dengan jam berikutnya.
+MLR011,SYNMHS011,ML_PY02,"Tambahkan pemeriksaan rentang diskon di awal proses_belanja, lalu hentikan proses dengan pesan jika nilainya di luar 0 sampai 100."
+MLR012,SYNMHS012,ML_PHP04,"Pencocokan satu judul bisa dijadikan fungsi tersendiri. cariBuku nanti tinggal mengumpulkan hasil, sehingga aturan pencariannya bisa dipakai dari bagian lain."
+MLR013,SYNMHS013,ML_CPP01,"prosesKeluar sebaiknya fokus memproses tagihan, lalu pencetakan rincian dan jumlah kendaraan dipisah ke fungsi laporan."
+MLR014,SYNMHS014,ML_PY03,"Rekap satu kategori bisa dibuat fungsi sendiri dengan parameter kategori. Dengan begitu, pola penjumlahan untuk makan dan transport tidak perlu ditulis ulang."
+MLR015,SYNMHS015,ML_JAVA02,Parameter a di proses kurang menjelaskan isinya. Dari namanya saja saya belum tahu itu daftar jumlah kehadiran mahasiswa.
+MLR016,SYNMHS016,ML_PHP01,"PHPDoc prosesPesanan menyebut hasil dalam dolar, padahal fungsi ini mencetak rupiah dan tidak mengembalikan total. Keterangan fungsinya tidak cocok."
+MLR017,SYNMHS017,ML_PHP02,$jumlahPeserta sudah menjelaskan maksudnya. Tapi $p di tampilkanDaftar terlalu singkat; pakai $namaPeserta supaya konsisten jelasnya.
+MLR018,SYNMHS018,ML_PY01,Hasil tugasnya belum lengkap karena ringkasan suhu terendah yang diminta belum ditampilkan. Yang tersedia baru rata-rata dan suhu tertinggi.
+MLR019,SYNMHS019,ML_CPP04,main masih menyusun teks laporan yang sama dua kali untuk layar dan arsip. Ada duplikasi pekerjaan yang bikin perubahan format harus dilakukan di dua tempat.
+MLR020,SYNMHS020,ML_PHP01,"Setelah penutup prosesPesanan, tambahkan baris kosong sebelum data pesanan contoh. Jadi batas definisi fungsi dan kode pemakainya lebih kelihatan."
+MLR021,SYNMHS021,ML_PY04,"Nama t di perulangan tampilkan sebaiknya diganti jadi tugas, agar maksud elemen yang sedang dibaca tidak terlalu singkat."
+MLR022,SYNMHS022,ML_PHP02,Nama Ayu bisa masuk lagi karena tambahPeserta langsung menambahkan data. Tidak ada percabangan untuk menolak peserta yang sudah terdaftar.
+MLR023,SYNMHS023,ML_PHP02,"Pendaftaran, perhitungan biaya, dan tampilan daftar sudah dipisah. Pembagian fungsi seperti ini membuat tugas tiap bagian mudah dikenali."
+MLR024,SYNMHS024,ML_CPP04,"kuotaAwalMb dan terpakaiMb sudah jelas, terutama akhiran Mb yang membantu menunjukkan satuan datanya."
+MLR025,SYNMHS025,ML_JAVA03,"Saat alat tidak tersedia, pinjam langsung mengembalikan false sebelum mengubah daftar. Jalur gagalnya sudah ditempatkan dengan jelas."
+MLR026,SYNMHS026,ML_PHP03,Pembuatan kalimat Total sementara ditulis dua kali di tampilkanLaporan. Tanggung jawab membentuk pesan yang sama masih terduplikasi.
+MLR027,SYNMHS027,ML_PY01,"suhu_harian sudah jelas menggambarkan isinya, tapi nama data di tampilkan_laporan masih umum. Samakan saja jadi suhu_harian agar lebih konsisten."
+MLR028,SYNMHS028,ML_PHP03,"Cast ke int dilakukan sebelum dikali 100, jadi kemajuan yang belum mencapai satu target malah berubah jadi nol persen."
+MLR029,SYNMHS029,ML_CPP03,ambilBerikutnya langsung mengakses front tanpa memeriksa apakah antreannya kosong. Kondisi kosong belum punya jalur penanganan.
+MLR030,SYNMHS030,ML_JAVA03,"Perkalian tarif dendanya sudah masuk akal, tapi menitTerlambat / 60 membuang sisa menit. Untuk 75 menit hasil tagihannya cuma satu jam."
+MLR031,SYNMHS031,ML_JAVA03,Urusan pinjam dan kembali sudah punya method masing-masing. Akan lebih rapi tanggung jawabnya kalau perhitungan denda dipindahkan ke komponen aturan biaya.
+MLR032,SYNMHS032,ML_JAVA01,Ada baris kosong setelah perulangan subtotal dan sebelum ringkasan pesanan. Pemisahan visualnya bikin kode lebih nyaman dibaca.
+MLR033,SYNMHS033,ML_PHP01,"Perkalian harga dengan jumlahnya sudah benar, cuma return-nya di-cast ke int. Bagian pecahan harga jadi hilang dari total pembayaran."
+MLR034,SYNMHS034,ML_CPP04,"Komentarnya sudah menjelaskan bahwa hasil berupa persentase. Supaya lebih lengkap, tulis juga batas masukan kuota awal yang diterima fungsi."
+MLR035,SYNMHS035,ML_PHP04,strpos masih membedakan huruf besar dan kecil. Coba gunakan stripos untuk operasi pencarian judul yang diminta tidak membedakan kapital.
+MLR036,SYNMHS036,ML_CPP03,"Pengambilan antrean, hitung biaya, dan cetak status dikerjakan fungsi yang berbeda. Masing-masing sudah punya tanggung jawab yang cukup jelas."
+MLR037,SYNMHS037,ML_JAVA01,"Penyusunan teks ringkasan pesanan ditulis lagi untuk arsip. Kalau formatnya berubah, dua bagian ini harus diperbarui sendiri-sendiri."
+MLR038,SYNMHS038,ML_PHP01,"Nama $hasil di hitungSubtotal bisa dibuat lebih khusus jadi $subtotalPesanan, biar kebaca nilai apa yang sedang dikumpulkan."
+MLR039,SYNMHS039,ML_PHP04,$data di cariBuku masih terlalu umum untuk kumpulan buku. Nama parameternya kurang menggambarkan isi yang akan dicari.
+MLR040,SYNMHS040,ML_PY03,"Cabang saat pengeluaran melebihi saldo sudah ada. Namun, tambahkan jalur penolakan jika ada nominal negatif sebelum proses rekap diteruskan."
+MLR041,SYNMHS041,ML_PY02,Penyusunan daftar barang per baris dan baris kosong antarbagian sudah rapi. Saya bisa membaca blok kodenya tanpa terasa bertumpuk.
+MLR042,SYNMHS042,ML_PHP04,PHPDoc cariBuku sudah jelas menyebut tujuan fungsi dan aturan kapitalnya.
+MLR043,SYNMHS043,ML_JAVA03,Baris return di ringkasan lumayan panjang. Coba lanjutkan penggabungan teksnya di baris berikut supaya tidak melebar ke samping.
+MLR044,SYNMHS044,ML_PY01,"Kalau daftar suhu kosong, program tetap masuk ke rata_rata lalu berhenti dengan error pembagian nol. Belum ada penanganan untuk jalur data kosong itu."
+MLR045,SYNMHS045,ML_PY04,"Konversi durasi sudah dipisah dari tampilan. Kalau mau lebih fokus lagi, pemilihan tugas yang belum selesai juga bisa dipisah dari fungsi pencetakannya."
+MLR046,SYNMHS046,ML_PY02,Kalimat jumlah jenis barang disusun ulang untuk arsip di fungsi yang sama. Ada pekerjaan yang sama dua kali padahal satu pembentuk pesan sudah cukup.
+MLR047,SYNMHS047,ML_CPP02,"Perhitungan insentif sudah dipisah dari pencatatan. Tinggal penyusunan teks slip yang masih diulang untuk arsip, itu bisa dijadikan satu fungsi saja."
+MLR048,SYNMHS048,ML_JAVA04,pesan belum membatasi jam 08 sampai 22. Angka di luar jam layanan tetap masuk ke jamTerpesan karena tidak ada jalur penolakannya.
+MLR049,SYNMHS049,ML_JAVA02,"Method proses bisa dibagi lagi: satu bagian menentukan status, bagian lain menampilkan laporan. Sekarang dua tanggung jawab itu masih menyatu."
+MLR050,SYNMHS050,ML_JAVA02,"Untuk persentase, coba pakai 100.0 pada perkaliannya. Dengan begitu hasil pembagiannya bisa tetap punya angka di belakang koma."
+MLR051,SYNMHS051,ML_CPP03,"pemilik sudah menggambarkan datanya dengan baik, tapi field h di Pekerjaan kurang informatif. Nama jumlahHalaman akan lebih jelas."
+MLR052,SYNMHS052,ML_PHP01,Pesanan kosong langsung mendapat pesan dan fungsi berhenti sebelum lanjut menghitung. Jalur khusus untuk data kosongnya sudah jelas.
+MLR053,SYNMHS053,ML_PY02,persen_diskon // 100 menghasilkan nol untuk diskon sepuluh persen. Akibatnya perkalian potongan juga nol terus.
+MLR054,SYNMHS054,ML_PY03,"Spasi setelah koma di dua baris print total dan sisa saldo tidak ada, padahal pemanggilan lain memakai spasi. Gaya penulisannya belum seragam."
+MLR055,SYNMHS055,ML_CPP03,"Fungsi ambilBerikutnya perlu dokumentasi bahwa pekerjaan yang diambil sekaligus dihapus dari antrean, jadi pemakainya tidak salah mengira datanya cuma dibaca."
+MLR056,SYNMHS056,ML_PHP01,"Sebagai simulasi transaksi kedai kecil, contohnya sudah mudah dicoba dan alur penggunaannya cukup tergambar."
+MLR057,SYNMHS057,ML_JAVA01,"Coba tambahkan pengecekan jumlah porsi negatif sebelum perulangan perhitungan dijalankan, supaya masukan seperti itu ditolak dari awal."
+MLR058,SYNMHS058,ML_JAVA02,Daftar status mahasiswa sudah muncul dan bisa dipakai untuk demo. Tapi bagian jumlah mahasiswa per status yang diminta tugas masih belum ada.
+MLR059,SYNMHS059,ML_PY03,Nama s setelah menghitung pengeluaran kurang menjelaskan bahwa isinya sisa saldo. Saya harus membaca operasi sebelumnya dulu untuk tahu maksudnya.
+MLR060,SYNMHS060,ML_CPP03,Bagian tugas untuk memasukkan beberapa pekerjaan pengguna belum terlihat. Program yang dikumpulkan masih sebatas demo satu pekerjaan tetap.
+MLR061,SYNMHS061,ML_PHP03,"$daftarDonasi, $totalDonasi, dan $targetDonasi punya penamaan yang konsisten. Saya bisa membedakan kumpulan data, hasil rekap, dan nilai tujuannya."
+MLR062,SYNMHS062,ML_PY02,"Supaya cakupan tugasnya terpenuhi, lengkapi pilihan menghapus barang dari daftar belanja. Sekarang contoh ini belum menyediakan bagian itu."
+MLR063,SYNMHS063,ML_CPP01,"Nama jm di Tiket bikin ragu karena nilainya ternyata durasi dalam menit, bukan jam seperti dugaan awal saya."
+MLR064,SYNMHS064,ML_JAVA04,"Pengecekan pesanan, hitung biaya, dan pembuatan bukti sudah punya tugas sendiri-sendiri. Pembagian method-nya membantu saya memahami program."
+MLR065,SYNMHS065,ML_PHP03,Tambahkan percabangan untuk menolak target nol atau negatif sebelum persentaseTarget dijalankan. Kondisi khusus itu perlu punya penanganan sendiri.
+MLR066,SYNMHS066,ML_CPP04,"Hasil persentaseSisa tetap terpotong meskipun fungsi mengembalikan double, soalnya pembagian di dalamnya memakai operand int semua."
+MLR067,SYNMHS067,ML_JAVA04,Perkalian durasiJam dengan tarifPerJam di hitungBiaya sudah langsung mewakili biaya sewa. Tidak ada operasi tambahan yang bikin rumusnya berbelit.
+MLR068,SYNMHS068,ML_CPP02,"beratKg sudah pakai double, itu cocok buat setoran pecahan. Sayangnya cast ke int di perhitungannya malah membuang bagian pecahan berat."
+MLR069,SYNMHS069,ML_PY04,Literal dictionary pada contoh tugas lumayan panjang. Coba taruh tiap pasangan key dan nilainya di baris terpisah supaya tidak terlalu melebar.
+MLR070,SYNMHS070,ML_PY02,"subtotal_belanja, potongan, dan total_bayar sudah membedakan nilai sebelum diskon, nilai diskon, dan hasil akhirnya. Penamaannya membantu banget."
+MLR071,SYNMHS071,ML_JAVA03,Secara keseluruhan contohnya cukup mewakili layanan peminjaman alat sederhana dan gampang diikuti saat dicoba.
+MLR072,SYNMHS072,ML_PHP03,"Untuk melengkapi tugas, tambahkan riwayat nominal tiap donasi juga. Versi ini baru memperlihatkan hasil rekapnya."
+MLR073,SYNMHS073,ML_CPP04,Tambahkan ringkasan pemakaian semua pengguna di akhir agar bagian rekap keseluruhan yang diminta tugas ikut terpenuhi.
+MLR074,SYNMHS074,ML_PHP02,"Kelengkapan tugasnya masih kurang, karena pembatalan keikutsertaan belum disediakan. Yang bisa dicoba baru pendaftarannya saja."
+MLR075,SYNMHS075,ML_CPP04,Spasi di sekitar operator dan indentasi blok for serta if sudah konsisten. Kode tidak terasa padat waktu dibaca.
+MLR076,SYNMHS076,ML_CPP03,"Susunan kurung fungsi sudah seragam. Yang perlu dirapikan, baris Halaman di cetakStatus menjoroknya tidak sama dengan baris pencetakan pemilik."
+MLR077,SYNMHS077,ML_PY03,"Untuk total, bisa pertahankan sum dengan generator seperti di total_pengeluaran. Bentuk itu langsung menjumlahkan nominal tanpa operasi perantara yang tidak perlu."
+MLR078,SYNMHS078,ML_JAVA04,"Kurung kurawalnya sudah konsisten, cuma baris cetak biaya di dalam if kurang menjorok dibanding baris cetak bukti di atasnya."
+MLR079,SYNMHS079,ML_CPP01,"Durasi menitnya sebaiknya dibagi 60.0 lalu dibulatkan ke atas sebelum dikalikan tarif, biar sisa menit tetap terhitung satu jam."
+MLR080,SYNMHS080,ML_PHP02,"Beri PHPDoc pada tambahPeserta yang menjelaskan bahwa array peserta ikut berubah, karena parameter itu diteruskan dengan referensi."
+MLR081,SYNMHS081,ML_PHP01,"Hitung subtotal sudah punya fungsi sendiri, itu membantu. Teks total untuk struk dan arsip masih dibentuk dua kali, sebaiknya pakai satu pembentuk pesan."
+MLR082,SYNMHS082,ML_PY03,Docstring total_pengeluaran jelas menyebut isi catatan dan satuan rupiahnya.
+MLR083,SYNMHS083,ML_PHP03,"Komentar jumlahDonasi sudah menyebut satuan rupiah, itu membantu. Tinggal jelaskan juga bentuk isi array yang harus diberikan sebagai parameter."
+MLR084,SYNMHS084,ML_JAVA02,Pembagian jalur boleh ujian dan belum boleh ujian sudah jelas. Tinggal tambahkan penanganan kalau jumlah pertemuan nol sebelum memanggil persentase.
+MLR085,SYNMHS085,ML_PY01,"Indentasi Python-nya sudah konsisten. Biar kelompok hasil angka dan pesan cuaca lebih kelihatan, beri baris kosong sebelum blok if rerata."
+MLR086,SYNMHS086,ML_PHP02,"Perhitungan biaya cukup jumlah peserta dikali tarif, sesuai kebutuhan tugas. Ekspresinya tidak perlu dibuat lebih panjang lagi."
+MLR087,SYNMHS087,ML_PY04,"continue untuk tugas yang sudah selesai ditempatkan sebelum pencetakan, jadi jalur tersebut langsung dilewati dan tidak ikut tampil lagi."
+MLR088,SYNMHS088,ML_PY04,"Pembagian menit ke jam sudah sesuai arah konversinya, tapi // membuang pecahannya. Estimasi tugas 95 menit akhirnya cuma ditulis satu jam."
+MLR089,SYNMHS089,ML_PY01,"Tambahkan docstring rata_rata tentang bentuk daftar masukannya dan satuan suhu yang dipakai, supaya orang yang membaca fungsi tidak perlu menebak."
+MLR090,SYNMHS090,ML_CPP03,Rumus halaman dikali salinan dikali tarif sudah pas dan nggak berbelit.
+MLR091,SYNMHS091,ML_PY02,Docstring hitung_potongan sudah menyebut nilai hasil dan satuannya. Akan lebih lengkap kalau dijelaskan juga bagaimana persentase diskon harus diberikan.
+MLR092,SYNMHS092,ML_PHP03,"Jarak antarfungsi dan spasi setelah koma sudah konsisten, jadi saya tidak perlu menebak batas tiap bagian kode."
+MLR093,SYNMHS093,ML_CPP02,Kasih satu baris kosong antara penutup catatSetoran dan awal main supaya batas kedua fungsi lebih kelihatan.
+MLR094,SYNMHS094,ML_JAVA04,"jamTerpesan sudah jelas namanya, tapi x di pesan terlalu umum. Kalau diganti jamMulai, maksud parameter itu lebih mudah ketahuan."
+MLR095,SYNMHS095,ML_PY04,"Docstring ringkas_tugas menyebut hasil diurutkan berdasarkan durasi, padahal isi fungsi cuma mengambil nama sesuai urutan daftar awal. Keterangannya tidak cocok."
+MLR096,SYNMHS096,ML_CPP01,"Simulasi tagihan parkirnya sudah bisa dicoba. Untuk memenuhi tugas interaktif, pengguna masih perlu diberi cara memasukkan kendaraan sendiri."
+MLR097,SYNMHS097,ML_JAVA04,"Program yang dikumpulkan belum lengkap untuk tugas ini. Yang tersedia baru pemesanan, sedangkan fitur pembatalan juga diminta."
+MLR098,SYNMHS098,ML_JAVA03,Daftar d sebaiknya diganti namanya jadi alatDipinjam. Nama itu lebih mewakili alat yang sedang dibawa peminjam.
+MLR099,SYNMHS099,ML_JAVA01,Javadoc hitungSubtotal sudah menyebut satuan hasilnya. Akan lebih membantu kalau ditambah keterangan apakah jumlah porsi boleh nol.
+MLR100,SYNMHS100,ML_PY04,Secara umum contoh ini sudah menggambarkan kebutuhan daftar tugas kuliah yang diminta dan cukup mudah dipakai untuk presentasi.
+MLR101,SYNMHS101,ML_JAVA01,Diskonnya jadi nol karena 5 / 100 dihitung sebagai bilangan bulat dulu. Jadi potongan lima persennya tidak masuk ke total.
+MLR102,SYNMHS102,ML_PY01,Pemakaian / pada perhitungan rata-rata sudah tepat karena hasilnya tetap bisa pecahan meskipun jumlah harinya bilangan bulat.
+MLR103,SYNMHS103,ML_CPP02,Parameter b mending diberi nama beratKg supaya satuan dan isi datanya langsung terbaca tanpa mencari pemanggilan fungsinya.
+MLR104,SYNMHS104,ML_CPP04,"Sebelum menghitung persentase, tambahkan kondisi yang menolak kuota awal nol. Jangan sampai jalur eksekusinya tetap masuk ke pembagian."
+MLR105,SYNMHS105,ML_CPP02,Secara umum sudah cukup menggambarkan simulasi setoran bank sampah.
+MLR106,SYNMHS106,ML_PHP04,"Loop-nya sudah memeriksa tiap buku, tapi hasil pencarian pada posisi nol dianggap gagal oleh if. Cabang buku ditemukan perlu memeriksa hasil secara eksplisit."
+MLR107,SYNMHS107,ML_JAVA01,"Nama hargaSatuan dan jumlahPorsi sudah jelas, nggak perlu nebak isi parameternya."
+MLR108,SYNMHS108,ML_CPP01,"Kondisi durasi positif sudah menyaring tiket yang diproses. Tapi untuk durasi nol atau negatif, tambahkan cabang pesan penolakan agar tidak diam saja."
+MLR109,SYNMHS109,ML_JAVA03,"Dokumentasi biayaKeterlambatan bilang hasilnya lama pinjam dalam jam, padahal yang dikembalikan nominal denda. Isi keterangannya tidak sesuai method."
+MLR110,SYNMHS110,ML_JAVA02,Baris cetak Kehadiran kurang sejajar dengan baris lain di dalam loop.
+MLR111,SYNMHS111,ML_JAVA01,"Biar sesuai deskripsi tugas, struknya perlu menampilkan rincian menu yang dipesan juga, jangan cuma total dan jumlah jenisnya."
+MLR112,SYNMHS112,ML_PHP04,"Pencarian judulnya sudah punya contoh pemakaian, lumayan buat demo. Tapi fitur pencarian tahun terbit yang ada di deskripsi tugas belum disediakan."

@@ -1,0 +1,166 @@
+{
+  "full_112": {
+    "n_comments": 112,
+    "n_students": 112,
+    "n_codes": 16,
+    "by_language": {
+      "Python": 28,
+      "C++": 28,
+      "Java": 28,
+      "PHP": 28
+    },
+    "by_target_label": {
+      "Variable": 16,
+      "Expression": 16,
+      "Control Flow": 16,
+      "Comment": 16,
+      "Layout and Formatting": 16,
+      "Decomposition": 16,
+      "General": 16
+    },
+    "by_feedback_type": {
+      "Appreciation": 28,
+      "Problem": 28,
+      "Suggestion": 28,
+      "Mixed": 28
+    },
+    "language_x_target_label": {
+      "Java": {
+        "Variable": 4,
+        "Expression": 4,
+        "Control Flow": 4,
+        "Comment": 4,
+        "Layout and Formatting": 4,
+        "Decomposition": 4,
+        "General": 4
+      },
+      "C++": {
+        "Variable": 4,
+        "Expression": 4,
+        "Control Flow": 4,
+        "Comment": 4,
+        "Layout and Formatting": 4,
+        "Decomposition": 4,
+        "General": 4
+      },
+      "PHP": {
+        "Variable": 4,
+        "Expression": 4,
+        "Control Flow": 4,
+        "Comment": 4,
+        "Layout and Formatting": 4,
+        "Decomposition": 4,
+        "General": 4
+      },
+      "Python": {
+        "Variable": 4,
+        "Expression": 4,
+        "Control Flow": 4,
+        "Comment": 4,
+        "Layout and Formatting": 4,
+        "Decomposition": 4,
+        "General": 4
+      }
+    },
+    "comments_per_code": {
+      "ML_JAVA01": 7,
+      "ML_JAVA02": 7,
+      "ML_JAVA03": 7,
+      "ML_JAVA04": 7,
+      "ML_CPP01": 7,
+      "ML_CPP02": 7,
+      "ML_CPP03": 7,
+      "ML_CPP04": 7,
+      "ML_PHP01": 7,
+      "ML_PHP02": 7,
+      "ML_PHP03": 7,
+      "ML_PHP04": 7,
+      "ML_PY01": 7,
+      "ML_PY02": 7,
+      "ML_PY03": 7,
+      "ML_PY04": 7
+    }
+  },
+  "compat_100": {
+    "n_comments": 100,
+    "n_students": 100,
+    "n_codes": 16,
+    "by_language": {
+      "Python": 25,
+      "Java": 25,
+      "PHP": 25,
+      "C++": 25
+    },
+    "by_target_label": {
+      "Variable": 14,
+      "Expression": 14,
+      "Control Flow": 14,
+      "Comment": 14,
+      "Layout and Formatting": 14,
+      "Decomposition": 15,
+      "General": 15
+    },
+    "by_feedback_type": {
+      "Appreciation": 25,
+      "Problem": 25,
+      "Suggestion": 25,
+      "Mixed": 25
+    },
+    "language_x_target_label": {
+      "Java": {
+        "Variable": 3,
+        "Expression": 3,
+        "Control Flow": 3,
+        "Comment": 4,
+        "Layout and Formatting": 4,
+        "Decomposition": 4,
+        "General": 4
+      },
+      "C++": {
+        "Variable": 3,
+        "Expression": 4,
+        "Control Flow": 4,
+        "Comment": 3,
+        "Layout and Formatting": 3,
+        "Decomposition": 4,
+        "General": 4
+      },
+      "PHP": {
+        "Variable": 4,
+        "Expression": 3,
+        "Control Flow": 4,
+        "Comment": 3,
+        "Layout and Formatting": 4,
+        "Decomposition": 3,
+        "General": 4
+      },
+      "Python": {
+        "Variable": 4,
+        "Expression": 4,
+        "Control Flow": 3,
+        "Comment": 4,
+        "Layout and Formatting": 3,
+        "Decomposition": 4,
+        "General": 3
+      }
+    },
+    "comments_per_code": {
+      "ML_JAVA01": 6,
+      "ML_JAVA02": 6,
+      "ML_JAVA03": 6,
+      "ML_JAVA04": 7,
+      "ML_CPP01": 6,
+      "ML_CPP02": 6,
+      "ML_CPP03": 6,
+      "ML_CPP04": 7,
+      "ML_PHP01": 6,
+      "ML_PHP02": 6,
+      "ML_PHP03": 6,
+      "ML_PHP04": 7,
+      "ML_PY01": 6,
+      "ML_PY02": 6,
+      "ML_PY03": 7,
+      "ML_PY04": 6
+    }
+  }
+}

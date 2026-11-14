@@ -1,0 +1,32 @@
+{
+  "selection_basis": "fixed 5-fold original-only validation; test not used for selection",
+  "primary_metric": "macro_f1",
+  "best_scenario": "S1_Original_Only",
+  "best_model_name": "LinearSVC__tfidf_char",
+  "classifier": "LinearSVC",
+  "vectorizer": "tfidf_char",
+  "deployment_seed": 42,
+  "labels_order": [
+    "Variable",
+    "Expression",
+    "Control Flow",
+    "Comment",
+    "Layout and Formatting",
+    "Decomposition",
+    "General"
+  ],
+  "no_stopword_removal": true,
+  "text_preprocessing": "clean_text() defined in Notebook 3; apply before pipeline.predict",
+  "original_train_rows": 1781,
+  "synthetic_train_rows": 0,
+  "input_sha256": {
+    "original_train": "934ceb180f3fb623240315cd6fc28d7046cb7602ec8412ace1b60d96cb47ef72",
+    "original_test": "9749f56f9280f44db5ecaabb0033ff4515b270289bf2947b0d5cee380c697e8d",
+    "source_bank": "1407d9ce9ccc021c635f3d706f15a8dec86201f79230706532a1b78fbe70a62a",
+    "cv_pool": "0842625f16aae28921a916121ce5ca995675ffe306884727dac554ec955d07b2",
+    "cv_assignments": "a873454f4632023e92e49f353511cf2f76a9bf797332b8fcd1fc6ec5b628f252",
+    "aug_783": "b7d4fe38b5956631d50ec2e1fef1252c5b6a15e44af10060299856baccb6f28b",
+    "aug_1050": "a41738cd7b6c96970aeef86ab3d2d49b8c26d1114b5529a57d975893e7e88c13"
+  },
+  "scikit_learn_version": "1.6.1"
+}

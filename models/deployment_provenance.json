@@ -1,0 +1,18 @@
+{
+  "created_date_local": "2026-11-05",
+  "model_source_filename": "best_model_selected_by_cv(2).joblib",
+  "model_source_library_file_id": "libfile_70a25b743d7881919930edee12703e20",
+  "metadata_source_filename": "best_model_metadata(2).json",
+  "metadata_source_library_file_id": "libfile_548f75903aa081918499d2134f19c93f",
+  "model_sha256": "f53bc15f425166545b16e30f8afdb488e758106d6051c79db904429feea6e565",
+  "artifact_modified_or_retrained": false,
+  "preprocessing_source_filename": "PCR_Notebook_03_ML_FixedCV_Original_vs_783_vs_1050(1).ipynb",
+  "preprocessing_source_library_file_id": "libfile_eb3560f3dfa4819192e37fc6447c27c5",
+  "preprocessing_source_cell_id": "f3743f07",
+  "preprocessing_policy": "Same clean_text and helper functions as source cell; vectorizer lowercase; no added stopword removal or stemming",
+  "xai_method": "Exact linear contrastive feature contributions: x_j * (w_pred,j - w_comparator,j); intercept included in reconstruction",
+  "coaching_method": "Rubric-based rules, separated from model feature attribution",
+  "demo_data_origin": "100 synthetic comments, one per fictitious student; generated for application demonstration",
+  "demo_overlap_checked_against_training_corpus": false,
+  "agreement_scope": "Unweighted nominal Cohen kappa: initial human labels versus fixed model predictions, prior to adjudication"
+}

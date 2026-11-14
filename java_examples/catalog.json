@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ML_JAVA01",
+    "file": "TagihanKantin.java",
+    "task": "Menghitung pesanan kantin dan diskon 5%, lalu menampilkan struk berisi rincian menu serta total. Data contoh memakai rupiah.",
+    "title": "[Java] Tagihan kantin",
+    "language": "Java"
+  },
+  {
+    "id": "ML_JAVA02",
+    "file": "RekapPresensi.java",
+    "task": "Menghitung persentase hadir, menentukan izin ujian pada batas 75%, dan menampilkan jumlah mahasiswa pada masing-masing status. Persentase boleh mengandung pecahan.",
+    "title": "[Java] Rekap presensi",
+    "language": "Java"
+  },
+  {
+    "id": "ML_JAVA03",
+    "file": "PeminjamanAlat.java",
+    "task": "Mencatat peminjaman dan pengembalian alat serta denda Rp3.000 untuk setiap jam keterlambatan yang dimulai; keterlambatan 75 menit ditagih dua jam.",
+    "title": "[Java] Peminjaman alat",
+    "language": "Java"
+  },
+  {
+    "id": "ML_JAVA04",
+    "file": "PemesananLapangan.java",
+    "task": "Menyediakan pemesanan dan pembatalan slot lapangan pada jam 08–22, menolak slot yang sudah terisi, menghitung biaya, dan mencetak bukti pemesanan.",
+    "title": "[Java] Pemesanan lapangan",
+    "language": "Java"
+  },
+  {
+    "id": "ML_CPP01",
+    "file": "parkir_kampus.cpp",
+    "task": "Membuat simulasi interaktif parkir: menerima nomor polisi dan durasi menit, menghitung tarif Rp3.000 per jam yang dimulai, lalu mencetak tagihan setiap kendaraan.",
+    "title": "[C++] Parkir kampus",
+    "language": "C++"
+  },
+  {
+    "id": "ML_CPP02",
+    "file": "bank_sampah.cpp",
+    "task": "Mencatat satu setoran bank sampah berdasarkan nama, berat kilogram yang boleh pecahan, dan harga per kilogram. Berat tidak positif ditolak dan bukti penerimaan dicetak.",
+    "title": "[C++] Setoran bank sampah",
+    "language": "C++"
+  },
+  {
+    "id": "ML_CPP03",
+    "file": "antrian_cetak.cpp",
+    "task": "Menyediakan antrean layanan cetak yang dapat menampung beberapa pekerjaan pengguna, memproses antrean dengan aman, dan menghitung biaya halaman × salinan × tarif.",
+    "title": "[C++] Antrean cetak",
+    "language": "C++"
+  },
+  {
+    "id": "ML_CPP04",
+    "file": "kuota_internet.cpp",
+    "task": "Menampilkan persentase sisa kuota yang boleh pecahan dan peringatan sisa di bawah 20%, serta ringkasan total pemakaian semua pengguna. Kuota awal harus positif.",
+    "title": "[C++] Rekap kuota internet",
+    "language": "C++"
+  },
+  {
+    "id": "ML_PHP01",
+    "file": "pesanan_kopi.php",
+    "task": "Menghitung total pesanan kedai dalam rupiah dengan harga yang boleh pecahan; pesanan kosong ditolak dan total dicetak sebagai bukti transaksi sederhana.",
+    "title": "[PHP] Pesanan kedai kopi",
+    "language": "PHP"
+  },
+  {
+    "id": "ML_PHP02",
+    "file": "pendaftaran_workshop.php",
+    "task": "Mengelola pendaftaran dan pembatalan peserta workshop. Peserta yang namanya sudah terdaftar harus ditolak; biaya dihitung dari jumlah peserta dan tarif per orang.",
+    "title": "[PHP] Pendaftaran workshop",
+    "language": "PHP"
+  },
+  {
+    "id": "ML_PHP03",
+    "file": "rekap_donasi.php",
+    "task": "Menampilkan total donasi, persentase kemajuan target yang boleh pecahan, dan riwayat nominal tiap donasi. Target wajib positif.",
+    "title": "[PHP] Rekap donasi kegiatan",
+    "language": "PHP"
+  },
+  {
+    "id": "ML_PHP04",
+    "file": "katalog_buku.php",
+    "task": "Mencari judul tanpa membedakan huruf besar-kecil dan menyediakan pencarian berdasarkan tahun terbit; hasil buku yang cocok ditampilkan.",
+    "title": "[PHP] Pencarian katalog buku",
+    "language": "PHP"
+  },
+  {
+    "id": "ML_PY01",
+    "file": "ringkasan_cuaca.py",
+    "task": "Merangkum rata-rata, suhu tertinggi dan terendah dari pengamatan harian; tampilkan peringatan panas untuk rata-rata minimal 30 derajat dan tangani data kosong.",
+    "title": "[Python] Ringkasan suhu harian",
+    "language": "Python"
+  },
+  {
+    "id": "ML_PY02",
+    "file": "daftar_belanja.py",
+    "task": "Mencatat daftar belanja, menyediakan penghapusan barang dari daftar, dan menghitung total setelah diskon; persentase diskon berada pada rentang 0–100.",
+    "title": "[Python] Daftar belanja kebutuhan kos",
+    "language": "Python"
+  },
+  {
+    "id": "ML_PY03",
+    "file": "pengeluaran_kos.py",
+    "task": "Merekap pengeluaran per kategori, sisa saldo, peringatan bila saldo terlampaui, dan pilihan periode bulanan. Nominal pengeluaran harus tidak negatif.",
+    "title": "[Python] Rekap pengeluaran kos",
+    "language": "Python"
+  },
+  {
+    "id": "ML_PY04",
+    "file": "jadwal_tugas.py",
+    "task": "Menampilkan tugas yang belum selesai beserta estimasi jam yang boleh pecahan, lalu ringkasan nama seluruh tugas sesuai urutan masukan.",
+    "title": "[Python] Daftar tugas kuliah",
+    "language": "Python"
+  }
+]

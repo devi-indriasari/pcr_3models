@@ -1,0 +1,2036 @@
+{
+  "title": "Target generasi dan metadata; bukan anotasi pakar",
+  "usage": "Khusus pengelola. Jangan diberikan kepada pakar sebelum anotasi independen dikunci. Tidak dimuat aplikasi.",
+  "created_date": "2026-11-06",
+  "shuffle_seed": 20261106,
+  "original_source_zip": "PCR_Streamlit_Code_Quality_v2.zip",
+  "source_zip_sha256": "612a44a8dee16594543bd6968f21f5eb7148f3d9373ef93d4dbaa20fb032ebca",
+  "targets_are_ground_truth": false,
+  "model_predictions_used_for_generation_or_selection": false,
+  "training_corpus_overlap_checked": false,
+  "unit_of_observation": "Satu komentar dari satu mahasiswa fiktif pada satu contoh source code; 7 calon label per source code pada set 112.",
+  "records": [
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Perhitungan rata-rata dan suhu tertinggi dipisahkan dari tampilan laporan. Fungsi-fungsinya jadi punya tugas yang mudah dibedakan.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pemisahan fungsi perhitungan dan tampilan",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "def suhu_tertinggi(suhu_harian):",
+      "Evidence_Lines": [
+        10
+      ],
+      "Rationale_Target": "Apresiasi pembagian tanggung jawab program.",
+      "expert_verified": false,
+      "comment_id": "MLR001",
+      "student_id": "SYNMHS001",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Keterangan catatSetoran menulis satuan gram, sementara nilai yang dipakai program dalam kilogram. Dokumentasinya bisa menyesatkan orang yang memanggil fungsi.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Ketepatan dokumentasi satuan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "// Menerima berat setoran dalam gram.",
+      "Evidence_Lines": [
+        13
+      ],
+      "Rationale_Target": "Menilai isi dokumentasi satuan, bukan mengubah nilai input.",
+      "expert_verified": false,
+      "comment_id": "MLR002",
+      "student_id": "SYNMHS002",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "Tambahkan keterangan pada pesan tentang arti true dan false yang dikembalikan, supaya pemanggil tahu apakah pemesanan berhasil atau ditolak.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi makna nilai kembali",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "public boolean pesan(int x) {",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Saran menambah dokumentasi kontrak method; bukan mengubah alur method.",
+      "expert_verified": false,
+      "comment_id": "MLR003",
+      "student_id": "SYNMHS003",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "Baris echo pemisah di tampilkan kurang masuk ke dalam dibanding echo judul. Penataan baris dalam foreach-nya belum konsisten.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Indentasi isi foreach",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "    echo \"----------------\\n\";",
+      "Evidence_Lines": [
+        21
+      ],
+      "Rationale_Target": "Kritik penataan source code, bukan gaya keluaran UI.",
+      "expert_verified": false,
+      "comment_id": "MLR004",
+      "student_id": "SYNMHS004",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Tulisan Selesai memproses tiket dicetak oleh baris yang indentasinya tidak sejajar dengan isi loop lainnya. Posisi barisnya jadi membingungkan.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Indentasi baris dalam loop",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "    std::cout << \"Selesai memproses tiket\\n\";",
+      "Evidence_Lines": [
+        26
+      ],
+      "Rationale_Target": "Menilai penataan baris kode; tidak mempersoalkan jumlah keluaran atau alur loop.",
+      "expert_verified": false,
+      "comment_id": "MLR005",
+      "student_id": "SYNMHS005",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Spasi pada perkalian sudah rapi. Di tampilkanDaftar, indentasi baris Status masih beda dari baris Peserta dalam blok yang sama.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi spasi dan indentasi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "      echo \"Status: terdaftar\\n\";",
+      "Evidence_Lines": [
+        19
+      ],
+      "Rationale_Target": "Apresiasi dan masalah sama-sama pada penataan visual kode.",
+      "expert_verified": false,
+      "comment_id": "MLR006",
+      "student_id": "SYNMHS006",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Setoran yang beratnya nol atau negatif langsung ditolak lalu fungsi berhenti. Alur itu sudah mencegah proses setoran dilanjutkan.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Penghentian dini setelah validasi",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "if (b <= 0) {",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Apresiasi terhadap jalur penolakan dan return.",
+      "expert_verified": false,
+      "comment_id": "MLR007",
+      "student_id": "SYNMHS007",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Sebagai demo pengeluaran kos sudah cukup tergambar. Untuk tugas laporan bulanan, pilihan periode yang diminta masih belum tersedia.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan pemilihan periode tugas",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "    proses_laporan(catatan, 100000)",
+      "Evidence_Lines": [
+        30
+      ],
+      "Rationale_Target": "Penilaian umum kesesuaian fitur, tanpa menilai rumus atau alur teknisnya.",
+      "expert_verified": false,
+      "comment_id": "MLR008",
+      "student_id": "SYNMHS008",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Penjelasan di atas persentase sudah cukup membantu karena menyebutkan dua nilai yang dipakai untuk menghitung hasilnya.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Manfaat dokumentasi tujuan method",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "/** Mengembalikan persentase kehadiran dari jumlah hadir dan total pertemuan. */",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Mengapresiasi informasi yang ditulis dalam dokumentasi kode.",
+      "expert_verified": false,
+      "comment_id": "MLR009",
+      "student_id": "SYNMHS009",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Komentar di atas hitungTagihan membantu menjelaskan satuan hasil dan bahwa tarif jam pertama sama dengan jam berikutnya.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi kebijakan tarif",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "// Menghitung tagihan dalam rupiah; jam pertama dan berikutnya memakai tarif yang sama.",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Mengapresiasi kegunaan komentar source code.",
+      "expert_verified": false,
+      "comment_id": "MLR010",
+      "student_id": "SYNMHS010",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "Tambahkan pemeriksaan rentang diskon di awal proses_belanja, lalu hentikan proses dengan pesan jika nilainya di luar 0 sampai 100.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Validasi dan penghentian pada input di luar rentang",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "def proses_belanja(daftar_barang, persen_diskon):",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Saran jalur penolakan dan penghentian eksekusi.",
+      "expert_verified": false,
+      "comment_id": "MLR011",
+      "student_id": "SYNMHS011",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "Pencocokan satu judul bisa dijadikan fungsi tersendiri. cariBuku nanti tinggal mengumpulkan hasil, sehingga aturan pencariannya bisa dipakai dari bagian lain.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Ekstraksi tanggung jawab pencocokan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "function cariBuku(array $data, string $kata): array {",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Saran pemisahan tanggung jawab yang dapat digunakan kembali.",
+      "expert_verified": false,
+      "comment_id": "MLR012",
+      "student_id": "SYNMHS012",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "prosesKeluar sebaiknya fokus memproses tagihan, lalu pencetakan rincian dan jumlah kendaraan dipisah ke fungsi laporan.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pemisahan proses dan pelaporan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "void prosesKeluar(const std::vector<Tiket>& daftar) {",
+      "Evidence_Lines": [
+        21
+      ],
+      "Rationale_Target": "Mengusulkan pembagian tanggung jawab fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR013",
+      "student_id": "SYNMHS013",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Rekap satu kategori bisa dibuat fungsi sendiri dengan parameter kategori. Dengan begitu, pola penjumlahan untuk makan dan transport tidak perlu ditulis ulang.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Ekstraksi tanggung jawab agregasi per kategori",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "    print(\"Transport:\", sum(item[\"nominal\"] for item in catatan if item[\"kategori\"] == \"transport\"))",
+      "Evidence_Lines": [
+        21
+      ],
+      "Rationale_Target": "Usulan fungsi reusable untuk tanggung jawab yang berulang.",
+      "expert_verified": false,
+      "comment_id": "MLR014",
+      "student_id": "SYNMHS014",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Parameter a di proses kurang menjelaskan isinya. Dari namanya saja saya belum tahu itu daftar jumlah kehadiran mahasiswa.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama array tidak menjelaskan isi",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "int[] a",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Menilai penamaan parameter array; bukan akses atau perhitungan elemennya.",
+      "expert_verified": false,
+      "comment_id": "MLR015",
+      "student_id": "SYNMHS015",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "PHPDoc prosesPesanan menyebut hasil dalam dolar, padahal fungsi ini mencetak rupiah dan tidak mengembalikan total. Keterangan fungsinya tidak cocok.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi hasil dan satuan yang keliru",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "/** Mengembalikan total pembayaran dalam dolar. */",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Kritik pada ketepatan dokumentasi source code.",
+      "expert_verified": false,
+      "comment_id": "MLR016",
+      "student_id": "SYNMHS016",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "$jumlahPeserta sudah menjelaskan maksudnya. Tapi $p di tampilkanDaftar terlalu singkat; pakai $namaPeserta supaya konsisten jelasnya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Konsistensi penamaan antar fungsi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "foreach ($peserta as $p) {",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Menilai kejelasan nama data pada dua bagian program.",
+      "expert_verified": false,
+      "comment_id": "MLR017",
+      "student_id": "SYNMHS017",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Hasil tugasnya belum lengkap karena ringkasan suhu terendah yang diminta belum ditampilkan. Yang tersedia baru rata-rata dan suhu tertinggi.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan ringkasan terhadap kebutuhan tugas",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "    print(\"Suhu tertinggi:\", suhu_tertinggi(data))",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Kritik kelengkapan keluaran tugas; tidak membahas rumus atau susunan kode.",
+      "expert_verified": false,
+      "comment_id": "MLR018",
+      "student_id": "SYNMHS018",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "main masih menyusun teks laporan yang sama dua kali untuk layar dan arsip. Ada duplikasi pekerjaan yang bikin perubahan format harus dilakukan di dua tempat.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Duplikasi pembentuk laporan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "std::string arsip = catatan.pengguna + \" - laporan pemakaian\";",
+      "Evidence_Lines": [
+        31
+      ],
+      "Rationale_Target": "Menilai duplikasi tanggung jawab penyusunan laporan.",
+      "expert_verified": false,
+      "comment_id": "MLR019",
+      "student_id": "SYNMHS019",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Setelah penutup prosesPesanan, tambahkan baris kosong sebelum data pesanan contoh. Jadi batas definisi fungsi dan kode pemakainya lebih kelihatan.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Pengelompokan visual definisi dan pemakaian",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "}\n$pesanan = [",
+      "Evidence_Lines": [
+        26,
+        27
+      ],
+      "Rationale_Target": "Saran ruang visual antara dua bagian source code.",
+      "expert_verified": false,
+      "comment_id": "MLR020",
+      "student_id": "SYNMHS020",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Nama t di perulangan tampilkan sebaiknya diganti jadi tugas, agar maksud elemen yang sedang dibaca tidak terlalu singkat.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama elemen perulangan yang representatif",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "for t in daftar_tugas:",
+      "Evidence_Lines": [
+        16
+      ],
+      "Rationale_Target": "Saran penamaan elemen iterasi; tidak menilai mekanisme loop.",
+      "expert_verified": false,
+      "comment_id": "MLR021",
+      "student_id": "SYNMHS021",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Nama Ayu bisa masuk lagi karena tambahPeserta langsung menambahkan data. Tidak ada percabangan untuk menolak peserta yang sudah terdaftar.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Jalur penolakan data duplikat",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "$peserta[] = $nama;",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Kritik terhadap tidak adanya cabang validasi duplikasi.",
+      "expert_verified": false,
+      "comment_id": "MLR022",
+      "student_id": "SYNMHS022",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Pendaftaran, perhitungan biaya, dan tampilan daftar sudah dipisah. Pembagian fungsi seperti ini membuat tugas tiap bagian mudah dikenali.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pembagian tanggung jawab fungsi",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "function tampilkanDaftar(array $peserta): void {",
+      "Evidence_Lines": [
+        16
+      ],
+      "Rationale_Target": "Apresiasi modularisasi berdasarkan tanggung jawab.",
+      "expert_verified": false,
+      "comment_id": "MLR023",
+      "student_id": "SYNMHS023",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "kuotaAwalMb dan terpakaiMb sudah jelas, terutama akhiran Mb yang membantu menunjukkan satuan datanya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Penamaan dengan informasi satuan",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "int kuotaAwalMb;",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Mengapresiasi makna dan konsistensi nama data.",
+      "expert_verified": false,
+      "comment_id": "MLR024",
+      "student_id": "SYNMHS024",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Saat alat tidak tersedia, pinjam langsung mengembalikan false sebelum mengubah daftar. Jalur gagalnya sudah ditempatkan dengan jelas.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Early return pada kondisi gagal",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "if (!tersedia.contains(namaAlat)) {",
+      "Evidence_Lines": [
+        14
+      ],
+      "Rationale_Target": "Mengapresiasi pengendalian jalur eksekusi sebelum perubahan status.",
+      "expert_verified": false,
+      "comment_id": "MLR025",
+      "student_id": "SYNMHS025",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Pembuatan kalimat Total sementara ditulis dua kali di tampilkanLaporan. Tanggung jawab membentuk pesan yang sama masih terduplikasi.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Duplikasi logika pembentuk pesan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "$arsip = \"Total sementara Rp \" . $totalDonasi;",
+      "Evidence_Lines": [
+        23
+      ],
+      "Rationale_Target": "Menilai pengulangan tanggung jawab program.",
+      "expert_verified": false,
+      "comment_id": "MLR026",
+      "student_id": "SYNMHS026",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "suhu_harian sudah jelas menggambarkan isinya, tapi nama data di tampilkan_laporan masih umum. Samakan saja jadi suhu_harian agar lebih konsisten.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Konsistensi penamaan parameter",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "def tampilkan_laporan(data):",
+      "Evidence_Lines": [
+        14
+      ],
+      "Rationale_Target": "Apresiasi dan saran konsistensi nama parameter.",
+      "expert_verified": false,
+      "comment_id": "MLR027",
+      "student_id": "SYNMHS027",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Cast ke int dilakukan sebelum dikali 100, jadi kemajuan yang belum mencapai satu target malah berubah jadi nol persen.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Urutan konversi dan perkalian persentase",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "return (int) ($totalDonasi / $targetDonasi) * 100;",
+      "Evidence_Lines": [
+        13
+      ],
+      "Rationale_Target": "Kritik operasi numerik dan hilangnya bagian pecahan.",
+      "expert_verified": false,
+      "comment_id": "MLR028",
+      "student_id": "SYNMHS028",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "ambilBerikutnya langsung mengakses front tanpa memeriksa apakah antreannya kosong. Kondisi kosong belum punya jalur penanganan.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Penanganan kondisi koleksi kosong",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "Pekerjaan hasil = antrean.front();",
+      "Evidence_Lines": [
+        20
+      ],
+      "Rationale_Target": "Masalah kondisi batas alur eksekusi sebelum akses koleksi.",
+      "expert_verified": false,
+      "comment_id": "MLR029",
+      "student_id": "SYNMHS029",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Perkalian tarif dendanya sudah masuk akal, tapi menitTerlambat / 60 membuang sisa menit. Untuk 75 menit hasil tagihannya cuma satu jam.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Pembulatan durasi sebelum perkalian",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "int jamTagihan = menitTerlambat / 60;",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Menilai hasil operasi pembagian dan pembulatan sesuai aturan biaya.",
+      "expert_verified": false,
+      "comment_id": "MLR030",
+      "student_id": "SYNMHS030",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Urusan pinjam dan kembali sudah punya method masing-masing. Akan lebih rapi tanggung jawabnya kalau perhitungan denda dipindahkan ke komponen aturan biaya.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pembagian tanggung jawab antarbagian",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "public double biayaKeterlambatan(int menitTerlambat) {",
+      "Evidence_Lines": [
+        23
+      ],
+      "Rationale_Target": "Apresiasi modularisasi dan usulan pemisahan tanggung jawab perhitungan biaya.",
+      "expert_verified": false,
+      "comment_id": "MLR031",
+      "student_id": "SYNMHS031",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Ada baris kosong setelah perulangan subtotal dan sebelum ringkasan pesanan. Pemisahan visualnya bikin kode lebih nyaman dibaca.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Pengelompokan visual dengan baris kosong",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "\n\n        // Pembayaran mendapat diskon lima persen dari subtotal.",
+      "Evidence_Lines": [
+        21,
+        22,
+        23
+      ],
+      "Rationale_Target": "Fokus pada batas visual baris kode, bukan pemisahan method.",
+      "expert_verified": false,
+      "comment_id": "MLR032",
+      "student_id": "SYNMHS032",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Perkalian harga dengan jumlahnya sudah benar, cuma return-nya di-cast ke int. Bagian pecahan harga jadi hilang dari total pembayaran.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Ketepatan konversi hasil uang",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "return (int) $hasil;",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Apresiasi rumus dan kritik konversi tipe dalam ekspresi hasil.",
+      "expert_verified": false,
+      "comment_id": "MLR033",
+      "student_id": "SYNMHS033",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "Komentarnya sudah menjelaskan bahwa hasil berupa persentase. Supaya lebih lengkap, tulis juga batas masukan kuota awal yang diterima fungsi.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi syarat parameter",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "// Mengembalikan persentase sisa kuota sebagai bilangan desimal.",
+      "Evidence_Lines": [
+        16
+      ],
+      "Rationale_Target": "Menilai kelengkapan dokumentasi fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR034",
+      "student_id": "SYNMHS034",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "strpos masih membedakan huruf besar dan kecil. Coba gunakan stripos untuk operasi pencarian judul yang diminta tidak membedakan kapital.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Pemilihan operasi pencarian string",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "strpos($buku['judul'], $kata)",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Saran operasi string yang dipakai; tidak membahas cabang saat indeks nol.",
+      "expert_verified": false,
+      "comment_id": "MLR035",
+      "student_id": "SYNMHS035",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "Pengambilan antrean, hitung biaya, dan cetak status dikerjakan fungsi yang berbeda. Masing-masing sudah punya tanggung jawab yang cukup jelas.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Kohesi dan pemisahan fungsi",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "void cetakStatus(const Pekerjaan& pekerjaan) {",
+      "Evidence_Lines": [
+        25
+      ],
+      "Rationale_Target": "Apresiasi pembagian tanggung jawab program.",
+      "expert_verified": false,
+      "comment_id": "MLR036",
+      "student_id": "SYNMHS036",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Penyusunan teks ringkasan pesanan ditulis lagi untuk arsip. Kalau formatnya berubah, dua bagian ini harus diperbarui sendiri-sendiri.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Duplikasi tanggung jawab penyusunan pesan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "String arsip = \"Pesanan: \" + menu.size() + \" jenis\";",
+      "Evidence_Lines": [
+        32
+      ],
+      "Rationale_Target": "Menilai duplikasi logika pembentukan pesan yang sama.",
+      "expert_verified": false,
+      "comment_id": "MLR037",
+      "student_id": "SYNMHS037",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Nama $hasil di hitungSubtotal bisa dibuat lebih khusus jadi $subtotalPesanan, biar kebaca nilai apa yang sedang dikumpulkan.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Penamaan akumulator sesuai tujuan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "$hasil = 0;",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Mengusulkan nama akumulator yang mewakili maknanya.",
+      "expert_verified": false,
+      "comment_id": "MLR038",
+      "student_id": "SYNMHS038",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "$data di cariBuku masih terlalu umum untuk kumpulan buku. Nama parameternya kurang menggambarkan isi yang akan dicari.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama parameter koleksi kurang spesifik",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "function cariBuku(array $data, string $kata): array {",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Fokus pada penamaan koleksi, bukan algoritma pencarian.",
+      "expert_verified": false,
+      "comment_id": "MLR039",
+      "student_id": "SYNMHS039",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Cabang saat pengeluaran melebihi saldo sudah ada. Namun, tambahkan jalur penolakan jika ada nominal negatif sebelum proses rekap diteruskan.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Percabangan status dan validasi data khusus",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "if total > saldo_awal:",
+      "Evidence_Lines": [
+        14
+      ],
+      "Rationale_Target": "Apresiasi cabang utama dan usulan cabang validasi.",
+      "expert_verified": false,
+      "comment_id": "MLR040",
+      "student_id": "SYNMHS040",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "Penyusunan daftar barang per baris dan baris kosong antarbagian sudah rapi. Saya bisa membaca blok kodenya tanpa terasa bertumpuk.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Penataan literal koleksi dan pemisahan visual",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "        {\"nama\": \"Beras\", \"harga\": 16000, \"jumlah\": 2},",
+      "Evidence_Lines": [
+        28
+      ],
+      "Rationale_Target": "Apresiasi tata letak source code.",
+      "expert_verified": false,
+      "comment_id": "MLR041",
+      "student_id": "SYNMHS041",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "PHPDoc cariBuku sudah jelas menyebut tujuan fungsi dan aturan kapitalnya.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Kejelasan dokumentasi tujuan pencarian",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "/** Mengembalikan buku dengan judul yang memuat kata pencarian, tanpa membedakan huruf besar dan kecil. */",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Mengapresiasi informasi tujuan dalam dokumentasi; tidak mengklaim implementasi telah memenuhi kontraknya.",
+      "expert_verified": false,
+      "comment_id": "MLR042",
+      "student_id": "SYNMHS042",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Baris return di ringkasan lumayan panjang. Coba lanjutkan penggabungan teksnya di baris berikut supaya tidak melebar ke samping.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Panjang baris ekspresi teks",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "return \"Tersedia \" + tersedia.size() + \" alat, dipinjam \" + d.size() + \" alat\";",
+      "Evidence_Lines": [
+        35
+      ],
+      "Rationale_Target": "Usulan memecah baris secara visual; tidak mengubah rumus atau membuat method baru.",
+      "expert_verified": false,
+      "comment_id": "MLR043",
+      "student_id": "SYNMHS043",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Kalau daftar suhu kosong, program tetap masuk ke rata_rata lalu berhenti dengan error pembagian nol. Belum ada penanganan untuk jalur data kosong itu.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Penanganan koleksi kosong sebelum perhitungan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "rerata = rata_rata(data)",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Kritik jalur eksekusi untuk kondisi khusus masukan kosong.",
+      "expert_verified": false,
+      "comment_id": "MLR044",
+      "student_id": "SYNMHS044",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Konversi durasi sudah dipisah dari tampilan. Kalau mau lebih fokus lagi, pemilihan tugas yang belum selesai juga bisa dipisah dari fungsi pencetakannya.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pemisahan pemilihan data dari presentasi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "def tampilkan(daftar_tugas):",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Apresiasi modularisasi dan usulan pemisahan tanggung jawab lanjutan.",
+      "expert_verified": false,
+      "comment_id": "MLR045",
+      "student_id": "SYNMHS045",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "Kalimat jumlah jenis barang disusun ulang untuk arsip di fungsi yang sama. Ada pekerjaan yang sama dua kali padahal satu pembentuk pesan sudah cukup.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Duplikasi penyusunan pesan laporan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "arsip = f\"Ada {len(daftar_barang)} jenis barang\"",
+      "Evidence_Lines": [
+        22
+      ],
+      "Rationale_Target": "Kritik duplikasi tanggung jawab penyusunan pesan.",
+      "expert_verified": false,
+      "comment_id": "MLR046",
+      "student_id": "SYNMHS046",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Perhitungan insentif sudah dipisah dari pencatatan. Tinggal penyusunan teks slip yang masih diulang untuk arsip, itu bisa dijadikan satu fungsi saja.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Modularisasi dan duplikasi teks",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "std::string arsip = nama + \" - setoran diterima\";",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Menilai pemisahan fungsi dan duplikasi tanggung jawab pembentuk pesan.",
+      "expert_verified": false,
+      "comment_id": "MLR047",
+      "student_id": "SYNMHS047",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "pesan belum membatasi jam 08 sampai 22. Angka di luar jam layanan tetap masuk ke jamTerpesan karena tidak ada jalur penolakannya.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Kondisi batas rentang waktu layanan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "jamTerpesan.add(x);",
+      "Evidence_Lines": [
+        16
+      ],
+      "Rationale_Target": "Fokus pada cabang validasi dan jalur penerimaan input, bukan nama x.",
+      "expert_verified": false,
+      "comment_id": "MLR048",
+      "student_id": "SYNMHS048",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Method proses bisa dibagi lagi: satu bagian menentukan status, bagian lain menampilkan laporan. Sekarang dua tanggung jawab itu masih menyatu.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Pemisahan aturan dan presentasi",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "public static void proses(String[] nama, int[] a, int pertemuan) {",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Usulan pembagian tanggung jawab ke method terpisah.",
+      "expert_verified": false,
+      "comment_id": "MLR049",
+      "student_id": "SYNMHS049",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Untuk persentase, coba pakai 100.0 pada perkaliannya. Dengan begitu hasil pembagiannya bisa tetap punya angka di belakang koma.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Pemilihan operand pecahan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "return hadir * 100 / pertemuan;",
+      "Evidence_Lines": [
+        9
+      ],
+      "Rationale_Target": "Mengusulkan perubahan tipe operand ekspresi pembagian.",
+      "expert_verified": false,
+      "comment_id": "MLR050",
+      "student_id": "SYNMHS050",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "pemilik sudah menggambarkan datanya dengan baik, tapi field h di Pekerjaan kurang informatif. Nama jumlahHalaman akan lebih jelas.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Kejelasan nama anggota struct",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "int h;",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Apresiasi dan kritik terhadap penamaan anggota data.",
+      "expert_verified": false,
+      "comment_id": "MLR051",
+      "student_id": "SYNMHS051",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Pesanan kosong langsung mendapat pesan dan fungsi berhenti sebelum lanjut menghitung. Jalur khusus untuk data kosongnya sudah jelas.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Guard clause untuk data kosong",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "if (count($pesanan) === 0) {",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Apresiasi percabangan dan penghentian dini pada input kosong.",
+      "expert_verified": false,
+      "comment_id": "MLR052",
+      "student_id": "SYNMHS052",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "persen_diskon // 100 menghasilkan nol untuk diskon sepuluh persen. Akibatnya perkalian potongan juga nol terus.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Floor division pada rasio diskon",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "return subtotal_belanja * (persen_diskon // 100)",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Masalah ekspresi pembagian bulat, bukan struktur kontrol.",
+      "expert_verified": false,
+      "comment_id": "MLR053",
+      "student_id": "SYNMHS053",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Spasi setelah koma di dua baris print total dan sisa saldo tidak ada, padahal pemanggilan lain memakai spasi. Gaya penulisannya belum seragam.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi spasi antar argumen",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "    print(\"Total pengeluaran:\",total)",
+      "Evidence_Lines": [
+        18
+      ],
+      "Rationale_Target": "Kritik gaya penataan source code, bukan tampilan hasil program.",
+      "expert_verified": false,
+      "comment_id": "MLR054",
+      "student_id": "SYNMHS054",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "Fungsi ambilBerikutnya perlu dokumentasi bahwa pekerjaan yang diambil sekaligus dihapus dari antrean, jadi pemakainya tidak salah mengira datanya cuma dibaca.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi efek samping fungsi",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "Pekerjaan ambilBerikutnya(std::queue<Pekerjaan>& antrean) {",
+      "Evidence_Lines": [
+        19
+      ],
+      "Rationale_Target": "Usulan dokumentasi perilaku fungsi, bukan mengubah operasi pop.",
+      "expert_verified": false,
+      "comment_id": "MLR055",
+      "student_id": "SYNMHS055",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Sebagai simulasi transaksi kedai kecil, contohnya sudah mudah dicoba dan alur penggunaannya cukup tergambar.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kesan umum terhadap kegunaan program",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "prosesPesanan($pesanan);",
+      "Evidence_Lines": [
+        31
+      ],
+      "Rationale_Target": "Apresiasi keseluruhan tanpa aspek teknis rubrik tertentu.",
+      "expert_verified": false,
+      "comment_id": "MLR056",
+      "student_id": "SYNMHS056",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Coba tambahkan pengecekan jumlah porsi negatif sebelum perulangan perhitungan dijalankan, supaya masukan seperti itu ditolak dari awal.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Cabang validasi sebelum perulangan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "for (int i = 0; i < harga.length; i++) {",
+      "Evidence_Lines": [
+        19
+      ],
+      "Rationale_Target": "Mengusulkan jalur penolakan masukan khusus dalam alur eksekusi.",
+      "expert_verified": false,
+      "comment_id": "MLR057",
+      "student_id": "SYNMHS057",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Daftar status mahasiswa sudah muncul dan bisa dipakai untuk demo. Tapi bagian jumlah mahasiswa per status yang diminta tugas masih belum ada.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan fitur rekap terhadap tugas",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "proses(nama, hadir, 14);",
+      "Evidence_Lines": [
+        26
+      ],
+      "Rationale_Target": "Apresiasi umum dan kekurangan fitur tugas tanpa membahas salah satu aspek teknis rubrik.",
+      "expert_verified": false,
+      "comment_id": "MLR058",
+      "student_id": "SYNMHS058",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Nama s setelah menghitung pengeluaran kurang menjelaskan bahwa isinya sisa saldo. Saya harus membaca operasi sebelumnya dulu untuk tahu maksudnya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama hasil perhitungan terlalu singkat",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "s = saldo_awal - total",
+      "Evidence_Lines": [
+        13
+      ],
+      "Rationale_Target": "Fokus pada makna nama hasil; bukan benar-salah operasi pengurangan.",
+      "expert_verified": false,
+      "comment_id": "MLR059",
+      "student_id": "SYNMHS059",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "Bagian tugas untuk memasukkan beberapa pekerjaan pengguna belum terlihat. Program yang dikumpulkan masih sebatas demo satu pekerjaan tetap.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Cakupan fungsional pengumpulan tugas",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "antrean.push({\"Lia\", 6});",
+      "Evidence_Lines": [
+        32
+      ],
+      "Rationale_Target": "Menilai kelengkapan kebutuhan pengguna pada tugas, bukan struktur perulangan.",
+      "expert_verified": false,
+      "comment_id": "MLR060",
+      "student_id": "SYNMHS060",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "$daftarDonasi, $totalDonasi, dan $targetDonasi punya penamaan yang konsisten. Saya bisa membedakan kumpulan data, hasil rekap, dan nilai tujuannya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Konsistensi nama koleksi dan hasil",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "$totalDonasi = jumlahDonasi($daftarDonasi);",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Menilai makna dan hubungan penamaan data.",
+      "expert_verified": false,
+      "comment_id": "MLR061",
+      "student_id": "SYNMHS061",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "Supaya cakupan tugasnya terpenuhi, lengkapi pilihan menghapus barang dari daftar belanja. Sekarang contoh ini belum menyediakan bagian itu.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kebutuhan fitur penghapusan barang",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "    proses_belanja(daftar_barang, 10)",
+      "Evidence_Lines": [
+        31
+      ],
+      "Rationale_Target": "Saran kelengkapan fungsional tugas, bukan rekomendasi pemecahan fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR062",
+      "student_id": "SYNMHS062",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Nama jm di Tiket bikin ragu karena nilainya ternyata durasi dalam menit, bukan jam seperti dugaan awal saya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Singkatan nama menyesatkan satuan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "int jm;",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Menilai makna dan keterbacaan nama field.",
+      "expert_verified": false,
+      "comment_id": "MLR063",
+      "student_id": "SYNMHS063",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "Pengecekan pesanan, hitung biaya, dan pembuatan bukti sudah punya tugas sendiri-sendiri. Pembagian method-nya membantu saya memahami program.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Kejelasan tanggung jawab tiap method",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "public String buatBukti(String pemesan, int jamMulai) {",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Mengapresiasi pemisahan tanggung jawab program.",
+      "expert_verified": false,
+      "comment_id": "MLR064",
+      "student_id": "SYNMHS064",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Tambahkan percabangan untuk menolak target nol atau negatif sebelum persentaseTarget dijalankan. Kondisi khusus itu perlu punya penanganan sendiri.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Cabang validasi parameter target",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "$persen = persentaseTarget($totalDonasi, $targetDonasi);",
+      "Evidence_Lines": [
+        18
+      ],
+      "Rationale_Target": "Saran jalur penanganan input batas, bukan modifikasi rumus.",
+      "expert_verified": false,
+      "comment_id": "MLR065",
+      "student_id": "SYNMHS065",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "Hasil persentaseSisa tetap terpotong meskipun fungsi mengembalikan double, soalnya pembagian di dalamnya memakai operand int semua.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Pembagian integer sebelum konversi hasil",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "return (kuotaAwalMb - terpakaiMb) * 100 / kuotaAwalMb;",
+      "Evidence_Lines": [
+        18
+      ],
+      "Rationale_Target": "Masalah tipe operand ekspresi numerik, bukan kondisi if peringatan.",
+      "expert_verified": false,
+      "comment_id": "MLR066",
+      "student_id": "SYNMHS066",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "Perkalian durasiJam dengan tarifPerJam di hitungBiaya sudah langsung mewakili biaya sewa. Tidak ada operasi tambahan yang bikin rumusnya berbelit.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Kesederhanaan ekspresi biaya",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "return durasiJam * tarifPerJam;",
+      "Evidence_Lines": [
+        21
+      ],
+      "Rationale_Target": "Mengapresiasi ekspresi aritmetika yang langsung dan sesuai tujuan.",
+      "expert_verified": false,
+      "comment_id": "MLR067",
+      "student_id": "SYNMHS067",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "beratKg sudah pakai double, itu cocok buat setoran pecahan. Sayangnya cast ke int di perhitungannya malah membuang bagian pecahan berat.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Konversi tipe membuang presisi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "return static_cast<int>(beratKg) * hargaPerKg;",
+      "Evidence_Lines": [
+        10
+      ],
+      "Rationale_Target": "Menilai pilihan tipe dan konversi dalam ekspresi numerik.",
+      "expert_verified": false,
+      "comment_id": "MLR068",
+      "student_id": "SYNMHS068",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Literal dictionary pada contoh tugas lumayan panjang. Coba taruh tiap pasangan key dan nilainya di baris terpisah supaya tidak terlalu melebar.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Panjang baris literal data",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "        {\"nama\": \"Laporan praktikum\", \"menit\": 95, \"selesai\": False},",
+      "Evidence_Lines": [
+        25
+      ],
+      "Rationale_Target": "Saran penataan visual literal data, bukan perancangan modul.",
+      "expert_verified": false,
+      "comment_id": "MLR069",
+      "student_id": "SYNMHS069",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "subtotal_belanja, potongan, dan total_bayar sudah membedakan nilai sebelum diskon, nilai diskon, dan hasil akhirnya. Penamaannya membantu banget.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama menunjukkan tahap pengolahan data",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "total_bayar = subtotal_belanja - potongan",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Apresiasi perbedaan makna nama data, bukan ketepatan rumusnya.",
+      "expert_verified": false,
+      "comment_id": "MLR070",
+      "student_id": "SYNMHS070",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Secara keseluruhan contohnya cukup mewakili layanan peminjaman alat sederhana dan gampang diikuti saat dicoba.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kesan keseluruhan program",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "public static void main(String[] args) {",
+      "Evidence_Lines": [
+        38
+      ],
+      "Rationale_Target": "Pujian umum tanpa aspek teknis rubrik tertentu.",
+      "expert_verified": false,
+      "comment_id": "MLR071",
+      "student_id": "SYNMHS071",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Untuk melengkapi tugas, tambahkan riwayat nominal tiap donasi juga. Versi ini baru memperlihatkan hasil rekapnya.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Pemenuhan fitur riwayat pada tugas",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "tampilkanLaporan($daftarDonasi, 300000);",
+      "Evidence_Lines": [
+        28
+      ],
+      "Rationale_Target": "Saran kelengkapan fitur keluaran secara umum.",
+      "expert_verified": false,
+      "comment_id": "MLR072",
+      "student_id": "SYNMHS072",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "Tambahkan ringkasan pemakaian semua pengguna di akhir agar bagian rekap keseluruhan yang diminta tugas ikut terpenuhi.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan rekap total pada tugas",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "std::vector<Pemakaian> daftar = {{\"Nina\", 1500, 640}, {\"Riko\", 1000, 720}};",
+      "Evidence_Lines": [
+        22
+      ],
+      "Rationale_Target": "Usulan memenuhi keluaran tugas secara umum tanpa memberi rumus teknis.",
+      "expert_verified": false,
+      "comment_id": "MLR073",
+      "student_id": "SYNMHS073",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Kelengkapan tugasnya masih kurang, karena pembatalan keikutsertaan belum disediakan. Yang bisa dicoba baru pendaftarannya saja.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan fitur wajib workshop",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "tambahPeserta($peserta, 'Ayu');",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Kritik terhadap cakupan fitur tugas, bukan pengelompokan fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR074",
+      "student_id": "SYNMHS074",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "Spasi di sekitar operator dan indentasi blok for serta if sudah konsisten. Kode tidak terasa padat waktu dibaca.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi spasi dan indentasi",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "if (sisa < 20) {",
+      "Evidence_Lines": [
+        26
+      ],
+      "Rationale_Target": "Apresiasi keterbacaan visual source code.",
+      "expert_verified": false,
+      "comment_id": "MLR075",
+      "student_id": "SYNMHS075",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "Susunan kurung fungsi sudah seragam. Yang perlu dirapikan, baris Halaman di cetakStatus menjoroknya tidak sama dengan baris pencetakan pemilik.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi indentasi keluaran source",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "  std::cout << \"Halaman: \" << pekerjaan.h << '\\n';",
+      "Evidence_Lines": [
+        27
+      ],
+      "Rationale_Target": "Menilai posisi visual baris source code.",
+      "expert_verified": false,
+      "comment_id": "MLR076",
+      "student_id": "SYNMHS076",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Untuk total, bisa pertahankan sum dengan generator seperti di total_pengeluaran. Bentuk itu langsung menjumlahkan nominal tanpa operasi perantara yang tidak perlu.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Kesederhanaan ekspresi agregasi",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "return sum(item[\"nominal\"] for item in catatan)",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Saran mempertahankan ekspresi agregasi yang sederhana, bukan mengubah pembagian fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR077",
+      "student_id": "SYNMHS077",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "Kurung kurawalnya sudah konsisten, cuma baris cetak biaya di dalam if kurang menjorok dibanding baris cetak bukti di atasnya.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi kurung dan indentasi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "          System.out.println(\"Biaya: \" + layanan.hitungBiaya(2, 80000));",
+      "Evidence_Lines": [
+        33
+      ],
+      "Rationale_Target": "Apresiasi dan masalah pada aspek penataan visual yang sama.",
+      "expert_verified": false,
+      "comment_id": "MLR078",
+      "student_id": "SYNMHS078",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Durasi menitnya sebaiknya dibagi 60.0 lalu dibulatkan ke atas sebelum dikalikan tarif, biar sisa menit tetap terhitung satu jam.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Pembulatan ke atas durasi tagihan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "int jamDibayar = durasiMenit / 60;",
+      "Evidence_Lines": [
+        17
+      ],
+      "Rationale_Target": "Saran operasi numerik sesuai satuan penagihan.",
+      "expert_verified": false,
+      "comment_id": "MLR079",
+      "student_id": "SYNMHS079",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Beri PHPDoc pada tambahPeserta yang menjelaskan bahwa array peserta ikut berubah, karena parameter itu diteruskan dengan referensi.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi mutasi parameter referensi",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "function tambahPeserta(array &$peserta, string $nama): bool {",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Saran dokumentasi efek pada parameter, bukan saran perubahan arsitektur.",
+      "expert_verified": false,
+      "comment_id": "MLR080",
+      "student_id": "SYNMHS080",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PHP01",
+      "language": "PHP",
+      "code_file": "pesanan_kopi.php",
+      "comment": "Hitung subtotal sudah punya fungsi sendiri, itu membantu. Teks total untuk struk dan arsip masih dibentuk dua kali, sebaiknya pakai satu pembentuk pesan.",
+      "Label_Target_LLM": "Decomposition",
+      "Subtopic": "Modularisasi dan pengurangan duplikasi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "$arsip = \"Total pesanan: Rp \" . $total;",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Apresiasi pemisahan fungsi serta saran mengurangi tanggung jawab yang berulang.",
+      "expert_verified": false,
+      "comment_id": "MLR081",
+      "student_id": "SYNMHS081",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY03",
+      "language": "Python",
+      "code_file": "pengeluaran_kos.py",
+      "comment": "Docstring total_pengeluaran jelas menyebut isi catatan dan satuan rupiahnya.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Manfaat dokumentasi struktur data",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "\"\"\"Menjumlahkan nominal pengeluaran; setiap catatan berisi kategori dan nominal rupiah.\"\"\"",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Apresiasi isi dokumentasi source code.",
+      "expert_verified": false,
+      "comment_id": "MLR082",
+      "student_id": "SYNMHS082",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Komentar jumlahDonasi sudah menyebut satuan rupiah, itu membantu. Tinggal jelaskan juga bentuk isi array yang harus diberikan sebagai parameter.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Kelengkapan dokumentasi struktur input",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "// Mengembalikan total seluruh donasi, dalam rupiah.",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Apresiasi dan saran perbaikan informasi dokumentasi kode.",
+      "expert_verified": false,
+      "comment_id": "MLR083",
+      "student_id": "SYNMHS083",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Pembagian jalur boleh ujian dan belum boleh ujian sudah jelas. Tinggal tambahkan penanganan kalau jumlah pertemuan nol sebelum memanggil persentase.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Percabangan utama dan kondisi batas",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "if (persen >= 75) {",
+      "Evidence_Lines": [
+        15
+      ],
+      "Rationale_Target": "Menilai jalur keputusan serta penanganan masukan khusus.",
+      "expert_verified": false,
+      "comment_id": "MLR084",
+      "student_id": "SYNMHS084",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Indentasi Python-nya sudah konsisten. Biar kelompok hasil angka dan pesan cuaca lebih kelihatan, beri baris kosong sebelum blok if rerata.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Indentasi dan pengelompokan visual",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "    print(\"Suhu tertinggi:\", suhu_tertinggi(data))\n    if rerata >= 30:",
+      "Evidence_Lines": [
+        17,
+        18
+      ],
+      "Rationale_Target": "Apresiasi dan saran pada keterbacaan visual, bukan pemisahan fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR085",
+      "student_id": "SYNMHS085",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_PHP02",
+      "language": "PHP",
+      "code_file": "pendaftaran_workshop.php",
+      "comment": "Perhitungan biaya cukup jumlah peserta dikali tarif, sesuai kebutuhan tugas. Ekspresinya tidak perlu dibuat lebih panjang lagi.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Kesederhanaan ekspresi biaya",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "return $jumlahPeserta * $tarif;",
+      "Evidence_Lines": [
+        8
+      ],
+      "Rationale_Target": "Apresiasi bentuk ekspresi perhitungan.",
+      "expert_verified": false,
+      "comment_id": "MLR086",
+      "student_id": "SYNMHS086",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "continue untuk tugas yang sudah selesai ditempatkan sebelum pencetakan, jadi jalur tersebut langsung dilewati dan tidak ikut tampil lagi.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Pengendalian iterasi dengan continue",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "        if t[\"selesai\"]:\n            continue",
+      "Evidence_Lines": [
+        17,
+        18
+      ],
+      "Rationale_Target": "Apresiasi kontrol jalur iterasi.",
+      "expert_verified": false,
+      "comment_id": "MLR087",
+      "student_id": "SYNMHS087",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Pembagian menit ke jam sudah sesuai arah konversinya, tapi // membuang pecahannya. Estimasi tugas 95 menit akhirnya cuma ditulis satu jam.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Ketepatan operator konversi durasi",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "return menit // 60",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Apresiasi dasar rumus dan kritik operator numerik.",
+      "expert_verified": false,
+      "comment_id": "MLR088",
+      "student_id": "SYNMHS088",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Tambahkan docstring rata_rata tentang bentuk daftar masukannya dan satuan suhu yang dipakai, supaya orang yang membaca fungsi tidak perlu menebak.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi format input dan satuan",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "def rata_rata(suhu_harian):",
+      "Evidence_Lines": [
+        6
+      ],
+      "Rationale_Target": "Saran penambahan dokumentasi kode yang belum ada.",
+      "expert_verified": false,
+      "comment_id": "MLR089",
+      "student_id": "SYNMHS089",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP03",
+      "language": "C++",
+      "code_file": "antrian_cetak.cpp",
+      "comment": "Rumus halaman dikali salinan dikali tarif sudah pas dan nggak berbelit.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Ekspresi perkalian beberapa faktor",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "return halaman * salinan * tarif;",
+      "Evidence_Lines": [
+        16
+      ],
+      "Rationale_Target": "Mengapresiasi rumus tanpa membahas nama variabelnya.",
+      "expert_verified": false,
+      "comment_id": "MLR090",
+      "student_id": "SYNMHS090",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY02",
+      "language": "Python",
+      "code_file": "daftar_belanja.py",
+      "comment": "Docstring hitung_potongan sudah menyebut nilai hasil dan satuannya. Akan lebih lengkap kalau dijelaskan juga bagaimana persentase diskon harus diberikan.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Kelengkapan dokumentasi parameter rasio",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "\"\"\"Menghitung potongan sebagai nilai desimal dalam rupiah.\"\"\"",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Menilai kelengkapan dokumentasi kode.",
+      "expert_verified": false,
+      "comment_id": "MLR091",
+      "student_id": "SYNMHS091",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP03",
+      "language": "PHP",
+      "code_file": "rekap_donasi.php",
+      "comment": "Jarak antarfungsi dan spasi setelah koma sudah konsisten, jadi saya tidak perlu menebak batas tiap bagian kode.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Konsistensi ruang visual",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "function persentaseTarget(int $totalDonasi, int $targetDonasi): float {",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Apresiasi penataan visual; tidak menilai pembagian tanggung jawab fungsi.",
+      "expert_verified": false,
+      "comment_id": "MLR092",
+      "student_id": "SYNMHS092",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Kasih satu baris kosong antara penutup catatSetoran dan awal main supaya batas kedua fungsi lebih kelihatan.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Jarak visual antar fungsi",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "}\nint main() {",
+      "Evidence_Lines": [
+        26,
+        27
+      ],
+      "Rationale_Target": "Saran penambahan ruang visual; tidak mengusulkan fungsi baru.",
+      "expert_verified": false,
+      "comment_id": "MLR093",
+      "student_id": "SYNMHS093",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "jamTerpesan sudah jelas namanya, tapi x di pesan terlalu umum. Kalau diganti jamMulai, maksud parameter itu lebih mudah ketahuan.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Konsistensi kejelasan nama state dan parameter",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "public boolean pesan(int x) {",
+      "Evidence_Lines": [
+        12
+      ],
+      "Rationale_Target": "Menilai dua nama yang tingkat kejelasannya berbeda.",
+      "expert_verified": false,
+      "comment_id": "MLR094",
+      "student_id": "SYNMHS094",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Docstring ringkas_tugas menyebut hasil diurutkan berdasarkan durasi, padahal isi fungsi cuma mengambil nama sesuai urutan daftar awal. Keterangannya tidak cocok.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi menjanjikan perilaku yang tidak dilakukan",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "\"\"\"Mengembalikan daftar tugas yang sudah diurutkan berdasarkan durasi.\"\"\"",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Kritik terhadap ketepatan dokumentasi, bukan terhadap kebutuhan pengurutan.",
+      "expert_verified": false,
+      "comment_id": "MLR095",
+      "student_id": "SYNMHS095",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Simulasi tagihan parkirnya sudah bisa dicoba. Untuk memenuhi tugas interaktif, pengguna masih perlu diberi cara memasukkan kendaraan sendiri.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kebutuhan interaksi pengguna",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "std::vector<Tiket> daftar = {{\"AB1234CD\", 95}, {\"AB5678EF\", 45}};",
+      "Evidence_Lines": [
+        32
+      ],
+      "Rationale_Target": "Penilaian umum terhadap kesesuaian fitur dengan deskripsi tugas.",
+      "expert_verified": false,
+      "comment_id": "MLR096",
+      "student_id": "SYNMHS096",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA04",
+      "language": "Java",
+      "code_file": "PemesananLapangan.java",
+      "comment": "Program yang dikumpulkan belum lengkap untuk tugas ini. Yang tersedia baru pemesanan, sedangkan fitur pembatalan juga diminta.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Fitur wajib tugas belum tersedia",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "boolean berhasil = layanan.pesan(10);",
+      "Evidence_Lines": [
+        30
+      ],
+      "Rationale_Target": "Kritik terhadap kelengkapan kebutuhan tugas, bukan usulan pemecahan method.",
+      "expert_verified": false,
+      "comment_id": "MLR097",
+      "student_id": "SYNMHS097",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Daftar d sebaiknya diganti namanya jadi alatDipinjam. Nama itu lebih mewakili alat yang sedang dibawa peminjam.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Penamaan koleksi berdasarkan status",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "private final List<String> d = new ArrayList<>();",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Fokus pada nama koleksi, bukan rancangan struktur datanya.",
+      "expert_verified": false,
+      "comment_id": "MLR098",
+      "student_id": "SYNMHS098",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Javadoc hitungSubtotal sudah menyebut satuan hasilnya. Akan lebih membantu kalau ditambah keterangan apakah jumlah porsi boleh nol.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Kelengkapan dokumentasi parameter",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "/** Menghitung harga satu pesanan; harga dan hasil dalam rupiah. */",
+      "Evidence_Lines": [
+        9
+      ],
+      "Rationale_Target": "Menilai isi Javadoc dan informasi yang perlu didokumentasikan.",
+      "expert_verified": false,
+      "comment_id": "MLR099",
+      "student_id": "SYNMHS099",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY04",
+      "language": "Python",
+      "code_file": "jadwal_tugas.py",
+      "comment": "Secara umum contoh ini sudah menggambarkan kebutuhan daftar tugas kuliah yang diminta dan cukup mudah dipakai untuk presentasi.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kesan umum pemenuhan tugas",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "    tampilkan(daftar_tugas)",
+      "Evidence_Lines": [
+        29
+      ],
+      "Rationale_Target": "Apresiasi keseluruhan tanpa fokus pada salah satu aspek teknis rubrik.",
+      "expert_verified": false,
+      "comment_id": "MLR100",
+      "student_id": "SYNMHS100",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Diskonnya jadi nol karena 5 / 100 dihitung sebagai bilangan bulat dulu. Jadi potongan lima persennya tidak masuk ke total.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Urutan operasi dan pembagian integer",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "int potongan = 5 / 100 * subtotalPesanan;",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Fokus pada nilai ekspresi diskon; tidak membahas percabangan.",
+      "expert_verified": false,
+      "comment_id": "MLR101",
+      "student_id": "SYNMHS101",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PY01",
+      "language": "Python",
+      "code_file": "ringkasan_cuaca.py",
+      "comment": "Pemakaian / pada perhitungan rata-rata sudah tepat karena hasilnya tetap bisa pecahan meskipun jumlah harinya bilangan bulat.",
+      "Label_Target_LLM": "Expression",
+      "Subtopic": "Operator pembagian menghasilkan pecahan",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "return sum(suhu_harian) / len(suhu_harian)",
+      "Evidence_Lines": [
+        7
+      ],
+      "Rationale_Target": "Apresiasi pilihan operator perhitungan rata-rata.",
+      "expert_verified": false,
+      "comment_id": "MLR102",
+      "student_id": "SYNMHS102",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Parameter b mending diberi nama beratKg supaya satuan dan isi datanya langsung terbaca tanpa mencari pemanggilan fungsinya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama parameter dan satuan data",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "double b, int hargaPerKg",
+      "Evidence_Lines": [
+        14
+      ],
+      "Rationale_Target": "Mengusulkan nama yang lebih representatif untuk parameter.",
+      "expert_verified": false,
+      "comment_id": "MLR103",
+      "student_id": "SYNMHS103",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP04",
+      "language": "C++",
+      "code_file": "kuota_internet.cpp",
+      "comment": "Sebelum menghitung persentase, tambahkan kondisi yang menolak kuota awal nol. Jangan sampai jalur eksekusinya tetap masuk ke pembagian.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Validasi kondisi pembagi nol",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "double sisa = persentaseSisa(catatan.kuotaAwalMb, catatan.terpakaiMb);",
+      "Evidence_Lines": [
+        24
+      ],
+      "Rationale_Target": "Saran jalur validasi input; tidak mengubah rumus persentase.",
+      "expert_verified": false,
+      "comment_id": "MLR104",
+      "student_id": "SYNMHS104",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_CPP02",
+      "language": "C++",
+      "code_file": "bank_sampah.cpp",
+      "comment": "Secara umum sudah cukup menggambarkan simulasi setoran bank sampah.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kesesuaian umum konteks simulasi",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "catatSetoran(\"Warga A\", 2.75, 4500);",
+      "Evidence_Lines": [
+        28
+      ],
+      "Rationale_Target": "Penilaian keseluruhan tanpa aspek teknis dominan.",
+      "expert_verified": false,
+      "comment_id": "MLR105",
+      "student_id": "SYNMHS105",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "Loop-nya sudah memeriksa tiap buku, tapi hasil pencarian pada posisi nol dianggap gagal oleh if. Cabang buku ditemukan perlu memeriksa hasil secara eksplisit.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Percabangan pada hasil pencarian posisi nol",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "if (strpos($buku['judul'], $kata)) {",
+      "Evidence_Lines": [
+        11
+      ],
+      "Rationale_Target": "Menilai penentuan jalur cabang untuk kondisi khusus hasil nol.",
+      "expert_verified": false,
+      "comment_id": "MLR106",
+      "student_id": "SYNMHS106",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Nama hargaSatuan dan jumlahPorsi sudah jelas, nggak perlu nebak isi parameternya.",
+      "Label_Target_LLM": "Variable",
+      "Subtopic": "Nama mewakili satuan dan tujuan data",
+      "Feedback_Type": "Appreciation",
+      "Evidence_Snippet": "int hargaSatuan, int jumlahPorsi",
+      "Evidence_Lines": [
+        10
+      ],
+      "Rationale_Target": "Menilai makna nama parameter, bukan rumus perkalian.",
+      "expert_verified": false,
+      "comment_id": "MLR107",
+      "student_id": "SYNMHS107",
+      "In_Compat100": false
+    },
+    {
+      "code_id": "ML_CPP01",
+      "language": "C++",
+      "code_file": "parkir_kampus.cpp",
+      "comment": "Kondisi durasi positif sudah menyaring tiket yang diproses. Tapi untuk durasi nol atau negatif, tambahkan cabang pesan penolakan agar tidak diam saja.",
+      "Label_Target_LLM": "Control Flow",
+      "Subtopic": "Cabang penolakan masukan tidak valid",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "if (tiket.jm > 0) {",
+      "Evidence_Lines": [
+        23
+      ],
+      "Rationale_Target": "Menilai perilaku jalur kondisi valid dan tidak valid.",
+      "expert_verified": false,
+      "comment_id": "MLR108",
+      "student_id": "SYNMHS108",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA03",
+      "language": "Java",
+      "code_file": "PeminjamanAlat.java",
+      "comment": "Dokumentasi biayaKeterlambatan bilang hasilnya lama pinjam dalam jam, padahal yang dikembalikan nominal denda. Isi keterangannya tidak sesuai method.",
+      "Label_Target_LLM": "Comment",
+      "Subtopic": "Dokumentasi hasil tidak sesuai implementasi",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "/** Mengembalikan lama peminjaman dalam jam. */",
+      "Evidence_Lines": [
+        22
+      ],
+      "Rationale_Target": "Menilai ketepatan dokumentasi, bukan rumus denda itu sendiri.",
+      "expert_verified": false,
+      "comment_id": "MLR109",
+      "student_id": "SYNMHS109",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA02",
+      "language": "Java",
+      "code_file": "RekapPresensi.java",
+      "comment": "Baris cetak Kehadiran kurang sejajar dengan baris lain di dalam loop.",
+      "Label_Target_LLM": "Layout and Formatting",
+      "Subtopic": "Indentasi tidak konsisten dalam blok",
+      "Feedback_Type": "Problem",
+      "Evidence_Snippet": "          System.out.println(\"Kehadiran: \" + persen + \"%\");",
+      "Evidence_Lines": [
+        20
+      ],
+      "Rationale_Target": "Membahas posisi visual baris dalam source code.",
+      "expert_verified": false,
+      "comment_id": "MLR110",
+      "student_id": "SYNMHS110",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_JAVA01",
+      "language": "Java",
+      "code_file": "TagihanKantin.java",
+      "comment": "Biar sesuai deskripsi tugas, struknya perlu menampilkan rincian menu yang dipesan juga, jangan cuma total dan jumlah jenisnya.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Pemenuhan keluaran yang diminta tugas",
+      "Feedback_Type": "Suggestion",
+      "Evidence_Snippet": "System.out.println(ringkasan);",
+      "Evidence_Lines": [
+        31
+      ],
+      "Rationale_Target": "Saran memenuhi fitur keluaran tugas; tidak menilai tata letak source code.",
+      "expert_verified": false,
+      "comment_id": "MLR111",
+      "student_id": "SYNMHS111",
+      "In_Compat100": true
+    },
+    {
+      "code_id": "ML_PHP04",
+      "language": "PHP",
+      "code_file": "katalog_buku.php",
+      "comment": "Pencarian judulnya sudah punya contoh pemakaian, lumayan buat demo. Tapi fitur pencarian tahun terbit yang ada di deskripsi tugas belum disediakan.",
+      "Label_Target_LLM": "General",
+      "Subtopic": "Kelengkapan fitur pencarian terhadap tugas",
+      "Feedback_Type": "Mixed",
+      "Evidence_Snippet": "tampilkan(cariBuku($koleksi, 'Web'));",
+      "Evidence_Lines": [
+        29
+      ],
+      "Rationale_Target": "Apresiasi umum dan kekurangan fitur, bukan penilaian algoritma.",
+      "expert_verified": false,
+      "comment_id": "MLR112",
+      "student_id": "SYNMHS112",
+      "In_Compat100": true
+    }
+  ]
+}

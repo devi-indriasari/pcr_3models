@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-06",
+  "checks": [
+    {
+      "name": "review_multibahasa_112.csv",
+      "passed": true,
+      "detail": {
+        "rows": 112,
+        "columns": [
+          "comment_id",
+          "student_id",
+          "code_id",
+          "comment"
+        ],
+        "duplicate_normalized_comments": 0,
+        "all_code_ids_resolved": true,
+        "no_target_or_prediction_columns": true
+      }
+    },
+    {
+      "name": "demo_comments_100.csv",
+      "passed": true,
+      "detail": {
+        "rows": 100,
+        "columns": [
+          "comment_id",
+          "student_id",
+          "code_id",
+          "comment"
+        ],
+        "duplicate_normalized_comments": 0,
+        "all_code_ids_resolved": true,
+        "no_target_or_prediction_columns": true
+      }
+    },
+    {
+      "name": "balanced_design",
+      "passed": true,
+      "detail": {
+        "full_language_label_cell_n": 4,
+        "full_language_n": 28,
+        "full_label_n": 16,
+        "full_feedback_type_n": 28,
+        "compat_language_n": 25,
+        "compat_feedback_type_n": 25,
+        "balance_basis": "LLM target labels; not expert-verified labels"
+      }
+    },
+    {
+      "name": "code_evidence_anchors",
+      "passed": true,
+      "detail": {
+        "anchors_found": 112,
+        "scope": "Literal source anchors checked; semantic correctness remains subject to independent expert annotation"
+      }
+    },
+    {
+      "name": "source_demo_nonduplication",
+      "passed": true,
+      "detail": {
+        "old_demo_rows": 100,
+        "new_rows": 112,
+        "exact_normalized_overlap": 0,
+        "training_corpus_or_other_batches_overlap_checked": false
+      }
+    },
+    {
+      "name": "original_loader_compatibility",
+      "passed": true,
+      "detail": {
+        "built_in_demo_rows": 100,
+        "csv_upload_rows": 112,
+        "source_files_resolved": 16,
+        "loader_file_edited": false
+      }
+    },
+    {
+      "name": "text_quality_controls",
+      "passed": true,
+      "detail": {
+        "empty_comments": 0,
+        "normalized_duplicates": 0,
+        "highest_token_jaccard_pairs": [
+          {
+            "jaccard": 0.2963,
+            "id_1": "MLR020",
+            "id_2": "MLR093"
+          },
+          {
+            "jaccard": 0.2857,
+            "id_1": "MLR020",
+            "id_2": "MLR032"
+          },
+          {
+            "jaccard": 0.2759,
+            "id_1": "MLR043",
+            "id_2": "MLR069"
+          },
+          {
+            "jaccard": 0.2667,
+            "id_1": "MLR058",
+            "id_2": "MLR100"
+          },
+          {
+            "jaccard": 0.2667,
+            "id_1": "MLR008",
+            "id_2": "MLR058"
+          },
+          {
+            "jaccard": 0.25,
+            "id_1": "MLR046",
+            "id_2": "MLR081"
+          },
+          {
+            "jaccard": 0.25,
+            "id_1": "MLR019",
+            "id_2": "MLR046"
+          },
+          {
+            "jaccard": 0.2414,
+            "id_1": "MLR027",
+            "id_2": "MLR051"
+          }
+        ],
+        "validated_semantic_accuracy_claim": false,
+        "predictions_used_for_selection": false
+      }
+    }
+  ],
+  "code_checks": [
+    {
+      "file": "TagihanKantin.java",
+      "language": "Java",
+      "syntax": "compiled using available OpenJDK 21 compiler module",
+      "sample_run_exit": 0,
+      "sample_output": "Total: 36000\nPesanan: 2 jenis\nArsip Pesanan: 2 jenis\n"
+    },
+    {
+      "file": "RekapPresensi.java",
+      "language": "Java",
+      "syntax": "compiled using available OpenJDK 21 compiler module",
+      "sample_run_exit": 0,
+      "sample_output": "Sinta boleh ujian\nKehadiran: 78.0%\nDodi belum boleh ujian\nKehadiran: 57.0%\nMega boleh ujian\nKehadiran: 85.0%\n"
+    },
+    {
+      "file": "PeminjamanAlat.java",
+      "language": "Java",
+      "syntax": "compiled using available OpenJDK 21 compiler module",
+      "sample_run_exit": 0,
+      "sample_output": "true\nDenda: 3000.0\nTersedia 1 alat, dipinjam 1 alat\n"
+    },
+    {
+      "file": "PemesananLapangan.java",
+      "language": "Java",
+      "syntax": "compiled using available OpenJDK 21 compiler module",
+      "sample_run_exit": 0,
+      "sample_output": "Pemesan: Kelompok A, mulai pukul 10\nBiaya: 160000\n"
+    },
+    {
+      "file": "parkir_kampus.cpp",
+      "language": "C++",
+      "syntax": "g++ -std=c++17 compilation",
+      "compiler_warnings": "",
+      "sample_run_exit": 0,
+      "sample_output": "AB1234CD: 3000\nSelesai memproses tiket\nAB5678EF: 0\nSelesai memproses tiket\nJumlah kendaraan: 2\n"
+    },
+    {
+      "file": "bank_sampah.cpp",
+      "language": "C++",
+      "syntax": "g++ -std=c++17 compilation",
+      "compiler_warnings": "",
+      "sample_run_exit": 0,
+      "sample_output": "Nasabah: Warga A\nInsentif: 9000\nWarga A - setoran diterima\nArsip: Warga A - setoran diterima\n"
+    },
+    {
+      "file": "antrian_cetak.cpp",
+      "language": "C++",
+      "syntax": "g++ -std=c++17 compilation",
+      "compiler_warnings": "",
+      "sample_run_exit": 0,
+      "sample_output": "Pencetakan untuk Lia\nHalaman: 6\nBiaya: 3000\n"
+    },
+    {
+      "file": "kuota_internet.cpp",
+      "language": "C++",
+      "syntax": "g++ -std=c++17 compilation",
+      "compiler_warnings": "",
+      "sample_run_exit": 0,
+      "sample_output": "Nina: 57%\nNina - laporan pemakaian\nArsip: Nina - laporan pemakaian\nRiko: 28%\nRiko - laporan pemakaian\nArsip: Riko - laporan pemakaian\n"
+    },
+    {
+      "file": "ringkasan_cuaca.py",
+      "language": "Python",
+      "syntax": "py_compile",
+      "sample_run_exit": 0,
+      "sample_output": "Rata-rata: 29.75\nSuhu tertinggi: 31.5\n"
+    },
+    {
+      "file": "daftar_belanja.py",
+      "language": "Python",
+      "syntax": "py_compile",
+      "sample_run_exit": 0,
+      "sample_output": "Total pembayaran: 60000\nAda 2 jenis barang\nArsip: Ada 2 jenis barang\n"
+    },
+    {
+      "file": "pengeluaran_kos.py",
+      "language": "Python",
+      "syntax": "py_compile",
+      "sample_run_exit": 0,
+      "sample_output": "Saldo masih cukup\nTotal pengeluaran: 45000\nSisa saldo: 55000\nMakan: 33000\nTransport: 12000\n"
+    },
+    {
+      "file": "jadwal_tugas.py",
+      "language": "Python",
+      "syntax": "py_compile",
+      "sample_run_exit": 0,
+      "sample_output": "Laporan praktikum - 1 jam\nBaca modul - 0 jam\nJumlah tugas: 3\nRingkasan: ['Laporan praktikum', 'Latihan SQL', 'Baca modul']\n"
+    }
+  ],
+  "php_checks": [
+    {
+      "file": "pesanan_kopi.php",
+      "language": "PHP",
+      "syntax": "php-parser 3.7.0, PHP 8.0 grammar; AST parse without suppressed errors",
+      "parsed": true,
+      "runtime_executed": false,
+      "reason": "Native PHP interpreter unavailable; runtime behavior was not executed."
+    },
+    {
+      "file": "pendaftaran_workshop.php",
+      "language": "PHP",
+      "syntax": "php-parser 3.7.0, PHP 8.0 grammar; AST parse without suppressed errors",
+      "parsed": true,
+      "runtime_executed": false,
+      "reason": "Native PHP interpreter unavailable; runtime behavior was not executed."
+    },
+    {
+      "file": "rekap_donasi.php",
+      "language": "PHP",
+      "syntax": "php-parser 3.7.0, PHP 8.0 grammar; AST parse without suppressed errors",
+      "parsed": true,
+      "runtime_executed": false,
+      "reason": "Native PHP interpreter unavailable; runtime behavior was not executed."
+    },
+    {
+      "file": "katalog_buku.php",
+      "language": "PHP",
+      "syntax": "php-parser 3.7.0, PHP 8.0 grammar; AST parse without suppressed errors",
+      "parsed": true,
+      "runtime_executed": false,
+      "reason": "Native PHP interpreter unavailable; runtime behavior was not executed."
+    }
+  ],
+  "model_inference_performed": false,
+  "generated_targets_are_verified_labels": false,
+  "original_application_ui_check": {
+    "app": "app_3models_compare.py",
+    "application_file_edited": false,
+    "built_in_demo_rows": 100,
+    "csv_upload_rows": 112,
+    "expert_annotation_started": true,
+    "initial_labels": 0,
+    "code_context_resolved": true,
+    "model_inference_performed": false,
+    "ui_exceptions": 0
+  },
+  "original_application_files_preserved": {
+    "count": 48,
+    "byte_identical_to_input_zip": true,
+    "app_3models_compare_py_changed": false,
+    "model_files_changed": false
+  }
+}

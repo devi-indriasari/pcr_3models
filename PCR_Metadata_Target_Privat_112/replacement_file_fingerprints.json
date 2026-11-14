@@ -1,0 +1,25 @@
+{
+  "dataset_role": "new synthetic evaluation candidates, pending expert annotation",
+  "sha256": {
+    "PANDUAN_PENGGANTIAN.md": "0a0d76332ae691467fbbccd3e4088698c8bf79078eccfa833764d8a56a8597a4",
+    "data/demo_comments_100.csv": "4d1b658710d661f8580c54009f7413a51358b84f37950e33116db26a6577b2ca",
+    "data/review_multibahasa_112.csv": "034fc1a71e5643f1ecd3d6b884349143ce2e9156619c3e5e6f7d3cdbd8c45f1d",
+    "java_examples/PemesananLapangan.java": "d8ca6992d1110101459aa150cbeb74f2926f59833ce43260f46f7e048ac983b9",
+    "java_examples/PeminjamanAlat.java": "a7e346abc1301e97477f788eb6c8901b3edbcc87f5936b680299f5de1a12d4fa",
+    "java_examples/RekapPresensi.java": "b621ae9b9a180f454b9b48c7a25959cf5139bc4c890fc630e2f65eb56ff92914",
+    "java_examples/TagihanKantin.java": "dd4c088fab6f6f7d9d6082e21160a811f3f1d09f05589e40a709fc88edda9d4e",
+    "java_examples/antrian_cetak.cpp": "81f718e795243a6539318a51b7b0528b316e454a09d8287276b14da36ef00488",
+    "java_examples/bank_sampah.cpp": "fab36fc9346c2df5a452f5ba49c3a1514796aca4407f04b9ba0615fe142c6566",
+    "java_examples/catalog.json": "1d1706a7d7846962354236b2232524fe5882d367054281f235c06e78adad572f",
+    "java_examples/daftar_belanja.py": "2e8ef40487d2a8ef447653d445259fc8b1f954691befa4cb3472ab6ec4d9f871",
+    "java_examples/jadwal_tugas.py": "4823d684610e54f6c612ab6b879a44d22663dd63e1e7cc0d76a1a7522780539e",
+    "java_examples/katalog_buku.php": "00133e582b3c98da323dcecd0e1be76bff662f5cc768a892b176a471ab2ede84",
+    "java_examples/kuota_internet.cpp": "3b716dae2ca670c2c424bf3d12e4c79aad532ad4bbc4f1d9c191562d767318ff",
+    "java_examples/parkir_kampus.cpp": "8f664cafd6762cec6e5ae1e90b584823195d8591230a6a960953fbdef3db6285",
+    "java_examples/pendaftaran_workshop.php": "17414027448c08dba9f3bda80b94f54e750583a1f427df888ad8e707e3dee58b",
+    "java_examples/pengeluaran_kos.py": "bcbfd142cdae8b3b7de20781c0bd21caf81c8c7beacfd8daf8adcf76d008cadd",
+    "java_examples/pesanan_kopi.php": "c5099bebf2956b2d471f29c74e8d88d0b0c7c364964dac44f0bbd2a2347879e5",
+    "java_examples/rekap_donasi.php": "c6e506c48cb1920e66fc5d332a9928dcf541ee8132b3f9ac526bc977e87f0e85",
+    "java_examples/ringkasan_cuaca.py": "d4b7630545a8fd86123311bafc49f2eb48c135ba8f70fd6e3426e587542a1a33"
+  }
+}
